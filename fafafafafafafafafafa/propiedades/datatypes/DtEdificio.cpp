@@ -20,7 +20,7 @@ istream& operator>>(istream& in, DtEdificio& dte){
 
 	int i = 0;
 	string s = " ";
-	while ( s == "\n"  && i < 3 ){
+	while ( s != "\n"  && i < 3 ){
 		in >> setw(1) >> s;
 		if (s == ",")
 			i++;
