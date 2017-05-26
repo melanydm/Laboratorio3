@@ -40,8 +40,8 @@ istream& operator>>(istream& in, DtEdificio& dte){
 
 // Sobrecarga cout
 ostream& operator<<(ostream& out, DtEdificio& dte){
-    out << "Nombre:" << this.nombre << "\r\n"
-	<< "Cant. pisos:" << this.cant_pisos << "\r\n"
-	<< "Gastos comunes:" << this.gastos_comunes;
+    out << "Nombre:" << this->nombre << "\r\n"
+	<< "Cant. pisos:" << this->cant_pisos << "\r\n"
+	<< "Gastos comunes:" << this->gastos_comunes;
     return out;
 }
