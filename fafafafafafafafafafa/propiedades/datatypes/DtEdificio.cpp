@@ -13,6 +13,7 @@ void DtEdificio::setCantPisos(int cant_pisos) { this->cant_pisos = cant_pisos; }
 void DtEdificio::setGastosComunes() { this->gastos_comunes = gastos_comunes; }
 
 // Sobrecarga cin
+/*
 istream& operator>>(istream& in, DtEdificio& dte){
 	string nombre = "";
 	int cant_pisos = 0;
@@ -45,3 +46,4 @@ ostream& operator<<(ostream& out, DtEdificio& dte){
 	<< "Gastos comunes:" << this->gastos_comunes;
     return out;
 }
+*/
