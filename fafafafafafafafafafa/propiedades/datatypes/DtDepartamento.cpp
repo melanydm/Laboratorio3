@@ -11,7 +11,7 @@ string DtDepartamento::getNombre() { return this->nombre; }
 // Getters
 void DtDepartamento::setId(int id) { this->id = id; }
 void DtDepartamento::setNombre(string nombre) { this->nombre = nombre; }
-
+/*
 istream& operator>>(istream&, DtDepartamento dtd){
     int id = 0;
     string nombre = "";
@@ -37,3 +37,4 @@ ostream& operator<<(ostream&, DtDepartamento dtd) {
         << "Nombre:" << this->nombre;
     return out;
 }
+*/
