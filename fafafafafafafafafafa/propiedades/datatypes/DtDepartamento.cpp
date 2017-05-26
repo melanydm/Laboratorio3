@@ -14,7 +14,7 @@ void DtDepartamento::setNombre(string nombre) { this->nombre = nombre; }
 
 istream& operator>>(istream&, DtDepartamento dtd){
     int id = 0;
-    string nombre;
+    string nombre = "";
 
     int i = 0;
 	string s = " ";
@@ -33,7 +33,7 @@ istream& operator>>(istream&, DtDepartamento dtd){
 }
 
 ostream& operator<<(ostream&, DtDepartamento dtd) {
-    out << "Id:" << this.id << "\r\n"
-        << "Nombre:" << this.nombre;
+    out << "Id:" << this->id << "\r\n"
+        << "Nombre:" << this->nombre;
     return out;
 }
