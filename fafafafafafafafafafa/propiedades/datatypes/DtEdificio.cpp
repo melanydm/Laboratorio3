@@ -30,12 +30,12 @@ istream& operator>>(istream& in, DtEdificio& dte){
 			cant_pisos = cant_pisos * 10 + (int)s;
 		else if (i == 2)
 			gastos_comunes = gastos_comunes * 10 + (float)s;
-			// en este caso habrá que ver los decimales.
+			// en este caso habrÃ¡ que ver los decimales.
 	}
 	
-	dte.setNombre(nombre);
-	dte.setCantPisos(cant_pisos) = cant_pisos;
-	dte.setGastosComunes(gastos_comunes) = gastos_comunes;
+	dte->setNombre(nombre);
+	dte->setCantPisos(cant_pisos) = cant_pisos;
+	dte->setGastosComunes(gastos_comunes) = gastos_comunes;
 }
 
 // Sobrecarga cout
