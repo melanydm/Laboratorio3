@@ -6,9 +6,15 @@
 using namespace std;
 
 class DtCasa : public DtPropiedad  {
+    private:
+        int mts_espaciosVerdes;
 
     public:
         DtCasa();
+    //getters
+    int getMts_espaciosVerdes();
+    //setters
+    void getMts_espaciosVerdes(int);
 
 		// Operators
 
