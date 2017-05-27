@@ -10,13 +10,22 @@ class DtOferta {
 
 		// Operators
 
-		virtual bool operator == (DtOferta) = 0;
+		//virtual bool operator == (DtOferta) = 0;
+		
+		// Getters
+		Transa getTipo();
+		float getPrecio();
+		
+		// Setters
+		void setTipo(Transa);
+		void setPrecio(float);
+		
 		// Destructor
 
 		virtual ~DtOferta();
 }
 
-virtual istream& operator>>(istream&, DtOferta);
-virtual ostream& operator<<(ostream&, DtOferta);
+//istream& operator>>(istream&, DtOferta);
+//ostream& operator<<(ostream&, DtOferta);
 
 #endif //DT_OFERTA_HPP
