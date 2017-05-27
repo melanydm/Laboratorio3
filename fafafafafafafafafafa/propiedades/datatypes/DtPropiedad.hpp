@@ -16,6 +16,7 @@ class DtPropiedad  {
 
     public:
         DtPropiedad();
+        DtPropiedad(DtPropiedad);
 
         //getters
         string getCodigo();

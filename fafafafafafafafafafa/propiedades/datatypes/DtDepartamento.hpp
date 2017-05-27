@@ -4,27 +4,24 @@
 using namespace std;
 
 class DtDepartamento {
-
+    private:
+        string id;
+        string nombre;
     public:
         DtDepartamento();
+        DtDepartamento(DtDepartamento);
 
 		// Operators
 
-		//virtual bool operator == (DtDepartamento) = 0;
+		virtual bool operator == (DtDepartamento) = 0;
 
-		// Getters
-		string getId();
-		string getNombre();
-	
-		// Setters
-		void setId(string);
-		void setNombre(string);
+
 		// Destructor
 
 		virtual ~DtDepartamento();
 }
 
-//istream& operator>>(istream&, DtDepartamento);
-//ostream& operator<<(ostream&, DtDepartamento);
+virtual istream& operator>>(istream&, DtDepartamento);
+virtual ostream& operator<<(ostream&, DtDepartamento);
 
 #endif //DT_DEPARTAMENTO_HPP
