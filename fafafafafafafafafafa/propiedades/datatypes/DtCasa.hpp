@@ -11,14 +11,14 @@ class DtCasa : public DtPropiedad  {
 
     public:
         DtCasa();
-    //getters
-    int getMts_espaciosVerdes();
-    //setters
-    void getMts_espaciosVerdes(int);
+	    //getters
+	    int getMts_espaciosVerdes();
+	    //setters
+	    void getMts_espaciosVerdes(int);
 
 		// Operators
 
-		virtual bool operator == (DtCasa) = 0;
+		//virtual bool operator == (DtCasa) = 0;
 
 
 		// Destructor
@@ -26,7 +26,7 @@ class DtCasa : public DtPropiedad  {
 		virtual ~DtCasa();
 }
 
-virtual istream& operator>>(istream&, DtCasa);
-virtual ostream& operator<<(ostream&, DtCasa);
+//istream& operator>>(istream&, DtCasa);
+//ostream& operator<<(ostream&, DtCasa);
 
 #endif //DT_CASA_HPP
