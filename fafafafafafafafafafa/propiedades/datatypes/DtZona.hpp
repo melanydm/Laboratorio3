@@ -10,13 +10,21 @@ class DtZona  {
 
 		// Operators
 
-		virtual bool operator == (DtZona) = 0;
+		//virtual bool operator == (DtZona) = 0;
 
+		// Getters
+		string getCodigo();
+		string getNombre();
+	
+		// Setters
+		void setCodigo(string);
+		void setNombre(string);
+	
 		// Destructor
 
 		virtual ~DtZona();
 }
-  virtual istream& operator>>(istream&, DtZona);
-  virtual ostream& operator<<(ostream&, DtZona);
+  //istream& operator>>(istream&, DtZona);
+  //ostream& operator<<(ostream&, DtZona);
 
 #endif //DT_ZONA_HPP
