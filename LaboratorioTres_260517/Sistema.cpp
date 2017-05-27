@@ -88,7 +88,18 @@ void Sistema :: selectEdificio(DtEdificio oDtEdificio){
   * y lego guardarlo en su map correspondiente.
   */
 void Sistema :: altaPropiedad(DtPropiedad oDtPropiedad, DtOferta oDtOferta){
-
+  /**
+  * Supuestamente, si se trata de castear dinámicamente un tipo a una clase que no es, 
+  * el casteo da NULL.
+  * Otra forma de verificar el tipo puede ser con la librería "type_info":
+  * que permite utilizar la funcion typeID que devuelve el nombre de la clase
+  */
+  if (dynamic_cast<DtCasa>(oDtPropiedad) == NULL) {
+    Casa * casa = new Casa(dynamic_cast<DtCasa>(oDtPropiedad));
+  } else {
+    Apartamento * apto = new Apartamento(dynamic_cast<DtApartamento>(oDtPropiedad));
+  }
+  Oferta * ofer = new Oferta(oDtOferta);
 }
 
 
