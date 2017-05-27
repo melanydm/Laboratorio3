@@ -13,23 +13,29 @@ class Usuario {
         string contrasenia;
 
     public:
+        // constructores
+    Usuario();
+    Usuario(string,string);
+    Usuario(DtUsuario);
+
+
         // geters seters
-		virtual string getEmail();
+		    virtual string getEmail();
         virtual string getContrasenia();
         virtual void setEmail(string);
         virtual void setContrasenia(string);
 
-        // toValueObject
+        // toDataType
 
-        virtual DtUsuario toValueObject() = 0;
+    virtual DtUsuario toDataType() = 0;
 
 		// Operators
 
-		virtual bool operator == (Usuario*) = 0;
+		bool operator == (Usuario*);
 
 		// Destructor
 
-		virtual ~Usuario();
+		~Usuario();
 }
 
 #endif //USUARIO_HPP

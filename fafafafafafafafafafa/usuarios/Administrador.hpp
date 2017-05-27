@@ -10,17 +10,13 @@ using namespace std;
 
 class Administrador : public Usuario {
     public:
-        Administrador();
+    Administrador();
 		Administrador(string, string);
 		Administrador(DtAdministrador);
 
         // toValueObject
 
-        DtAdministrador toValueObject();
-
-		// Operators
-
-		bool operator == (Administrador*);
+   DtUsuario toDataType() ;
 
 		// Destructor
 

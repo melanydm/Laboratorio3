@@ -5,24 +5,18 @@ Administrador :: Administrador(){
 
 }
 
-Administrador :: Administrador(string email, string contrasenia){
-    this->email = email;
-    this->contrasenia = contrasenia;
+Administrador :: Administrador(string email, string contrasenia):Usuario(email, contrasenia){
+
 }
-
-
-virtual string Administrador :: getEmail();
-virtual string Administrador :: getContrasenia();
-virtual void Administrador :: setEmail(string);
-virtual void setContrasenia(string);
 
         // toValueObject
 
-virtual DtUsuario* Administrador :: toValueObject() = 0;
-
-		// Operators
-
-virtual bool operator == (Usuario*);
+ DtUsuario Administrador :: toDataType(){
+   DtAdministrador oDtAdministrador;
+   oDtAdministrador.setEmail(this->getEmail());
+   oDtAdministrador.setContrasenia(this->getContrasenia());
+   return oDtAdministrador;
+ }
 
 		// Destructor
 

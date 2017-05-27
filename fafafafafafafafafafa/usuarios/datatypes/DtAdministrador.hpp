@@ -11,16 +11,12 @@ class DtAdministrador : public DtUsuario {
     public:
         DtAdministrador();
 
-		// Operators
-
-		bool operator == (DtAdministrador);
-
-		// Destructor
+	// Destructor
 
 		virtual ~DtAdministrador();
 }
 
-virtual istream& operator>>(istream&, DtAdministrador);
-virtual ostream& operator<<(ostream&, DtAdministrador);
+//virtual istream& operator>>(istream&, DtAdministrador);
+//virtual ostream& operator<<(ostream&, DtAdministrador);
 
 #endif //DT_ADMINISTRADOR_HPP

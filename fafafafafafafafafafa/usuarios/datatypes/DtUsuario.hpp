@@ -23,7 +23,7 @@ class DtUsuario {
 
 		// Operators
 
-		virtual bool operator == (DtUsuario) = 0;
+		bool operator == (DtUsuario);
 
 		// Destructor
 

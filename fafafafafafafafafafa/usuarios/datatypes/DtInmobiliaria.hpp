@@ -22,16 +22,11 @@ class DtInmobiliaria : public DtUsuario {
         void setNombre(string);
         void setDireccion(DtDireccion);
 
-		// Operators
-
-		bool operator == (DtInmobiliaria);
-
-		// Destructor
 
 		virtual ~DtInmobiliaria();
 }
 
-virtual istream& operator>>(istream&, DtInmobiliaria);
-virtual ostream& operator<<(ostream&, DtInmobiliaria);
+//virtual istream& operator>>(istream&, DtInmobiliaria);
+//virtual ostream& operator<<(ostream&, DtInmobiliaria);
 
 #endif //DT_INMOBILIARIA_HPP

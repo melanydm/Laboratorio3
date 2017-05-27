@@ -15,7 +15,7 @@ class Interesado : public Usuario {
         int edad;
 
     public:
-        Interesado();
+    Interesado();
 		Interesado(string,string,string,string, int);
 		Interesado(DtInteresado);
 
@@ -27,13 +27,9 @@ class Interesado : public Usuario {
         void getApellido(string);
         void getEdad(int);
 
-        // toValueObject
+        // toDataType
 
-        DtInteresado toValueObject();
-
-		// Operators
-
-		virtual bool operator == (Usuario*) = 0;
+     DtUsuario toDataType();
 
 		// Destructor
 

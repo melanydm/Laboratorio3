@@ -26,16 +26,10 @@ class DtInteresado : public DtUsuario {
         void getApellido(string);
         void getEdad(int);
 
-		// Operators
-
-		bool operator == (DtInteresado);
-
-		// Destructor
-
 		virtual ~DtInteresado();
 }
 
-virtual istream& operator>>(istream&, DtInteresado);
-virtual ostream& operator<<(ostream&, DtInteresado);
+//virtual istream& operator>>(istream&, DtInteresado);
+//virtual ostream& operator<<(ostream&, DtInteresado);
 
 #endif //DT_INTERESADO_HPP

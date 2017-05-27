@@ -25,13 +25,9 @@ class Inmobiliaria : public Usuario {
         void setNombre(string);
         void setDireccion(DtDireccion);
 
-        // toValueObject
+        // toDataType
 
-        DtInmobiliaria toValueObject();
-
-		// Operators
-
-		virtual bool operator == (Usuario*) = 0;
+   DtUsuario toDataType();
 
 		// Destructor
 
