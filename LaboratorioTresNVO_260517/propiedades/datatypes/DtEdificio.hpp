@@ -7,7 +7,7 @@ class DtEdificio  {
 
     public:
         DtEdificio();
-	DtEdificio(DtEdificio);
+	DtEdificio(DtEdificio&);
 
 		// Operators
 
