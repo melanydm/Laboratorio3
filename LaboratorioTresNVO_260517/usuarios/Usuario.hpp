@@ -36,6 +36,6 @@ class Usuario {
 		// Destructor
 
 		~Usuario();
-}
+};
 
 #endif //USUARIO_HPP
