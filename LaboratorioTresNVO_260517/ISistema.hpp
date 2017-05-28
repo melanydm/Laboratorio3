@@ -38,6 +38,6 @@ class ISistema {
       //Funciones para precargar datos
       virtual void precargarDatos();
 
-}
+};
 
 #endif //ISISTEMA_HPP
