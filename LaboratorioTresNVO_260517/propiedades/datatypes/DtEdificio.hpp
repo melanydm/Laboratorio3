@@ -7,6 +7,7 @@ class DtEdificio  {
 
     public:
         DtEdificio();
+	DtEdificio(DtEdificio);
 
 		// Operators
 
@@ -25,7 +26,7 @@ class DtEdificio  {
 		// Destructor
 
 		virtual ~DtEdificio();
-}
+};
 
 //istream& operator>>(istream&, DtEdificio);
 //ostream& operator<<(ostream&, DtEdificio);
