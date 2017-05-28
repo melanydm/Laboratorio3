@@ -17,7 +17,7 @@ class DtDepartamento {
         string getNombre(){ return nombre; }
 		// Operators
 
-		virtual bool operator == (DtDepartamento) = 0;
+		//virtual bool operator == (DtDepartamento) = 0;
 
 
 		// Destructor
@@ -25,7 +25,7 @@ class DtDepartamento {
 		virtual ~DtDepartamento();
 }
 
-virtual istream& operator>>(istream&, DtDepartamento);
-virtual ostream& operator<<(ostream&, DtDepartamento);
+//virtual istream& operator>>(istream&, DtDepartamento);
+//virtual ostream& operator<<(ostream&, DtDepartamento);
 
 #endif //DT_DEPARTAMENTO_HPP
