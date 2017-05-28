@@ -15,6 +15,7 @@ class DtInmobiliaria : public DtUsuario {
 
     public:
         DtInmobiliaria();
+	DtInmobiliaria(DtInmobiliaria&)
 
         // geters seters
 	string getNombre();
