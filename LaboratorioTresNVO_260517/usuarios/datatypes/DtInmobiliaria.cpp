@@ -8,6 +8,11 @@ DtInmobiliaria :: DtInmobiliaria(): DtUsuario(){
   this->direccion = "";
 }
 
+DtInmobiliaria :: DtInmobiliaria(DtInmobiliaria inmo): DtUsuario(inmo){
+  this->nombre =inmo.getNombre();
+  this->direccion = inmo.getDireccion();
+}
+
 string DtInmobiliaria :: getNombre(){
   return this->nombre;
 }
