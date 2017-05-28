@@ -8,11 +8,11 @@ class Departamento
         Departamento();
         Departamento(DtDepartamento);
         virtual ~Departamento();
-        string getId() { return id; }
-        void setId(string val) { id = val; }
-        string getNombre() { return nombre; }
-        void setNombre(string val) { nombre = val; }
-    protected:
+        string getId() { return id; };
+        void setId(string val) { id = val; };
+        string getNombre() { return nombre; };
+        void setNombre(string val) { nombre = val; };
+
     private:
         string id;
         string nombre;
