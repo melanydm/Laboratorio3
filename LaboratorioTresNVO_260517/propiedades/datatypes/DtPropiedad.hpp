@@ -16,7 +16,7 @@ class DtPropiedad  {
 
     public:
         DtPropiedad();
-        DtPropiedad(DtPropiedad);
+        DtPropiedad(DtPropiedad&);
 
         //getters
         string getCodigo();
@@ -46,9 +46,9 @@ class DtPropiedad  {
 		// Destructor
 
 		virtual ~DtPropiedad()=0;
-}
-virtual istream& operator>>(istream&, DtPropiedad)=0;
-virtual ostream& operator<<(ostream&, DtPropiedad)=0;
+};
+//virtual istream& operator>>(istream&, DtPropiedad)=0;
+//virtual ostream& operator<<(ostream&, DtPropiedad)=0;
 
 
 #endif //DT_PROPIEDAD_HPP
