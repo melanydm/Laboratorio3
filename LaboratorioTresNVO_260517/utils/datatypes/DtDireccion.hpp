@@ -23,6 +23,6 @@ class DtDireccion {
 		// Operators
 
 		bool operator == (DtDireccion);
-}
+};
 
 #endif //DT_DIRECCION_HPP
