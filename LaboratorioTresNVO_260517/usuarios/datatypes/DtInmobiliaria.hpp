@@ -17,15 +17,14 @@ class DtInmobiliaria : public DtUsuario {
         DtInmobiliaria();
 
         // geters seters
-		string getNombre();
+	string getNombre();
         DtDireccion getDireccion();
         void setNombre(string);
         void setDireccion(DtDireccion);
 
 
 		virtual ~DtInmobiliaria();
-}
-
+};
 //virtual istream& operator>>(istream&, DtInmobiliaria);
 //virtual ostream& operator<<(ostream&, DtInmobiliaria);
 
