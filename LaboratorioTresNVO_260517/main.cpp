@@ -33,6 +33,7 @@ Fabrica* fabrica = NULL;
 int main(void) {
 	fabrica = new Fabrica();
 	sistema = fabrica->getSistema();
+	sistema->precargarDatos();
 	char menu='0';
   bool salir= false;
 

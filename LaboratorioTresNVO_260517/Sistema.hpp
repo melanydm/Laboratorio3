@@ -50,6 +50,8 @@ class Sistema: public ISistema {
       bool altaInmobiliaria(DtInmobiliaria);
 
       void altaEdificio(DtEdificio);
+      void altaZona(DtZona);
+      void altaDepartamento(DtDepartamento);
       list<DtDepartamento> listarDepto();
       void selectDepto(DtDepartamento);
       list<DtZona> listarZona();
@@ -60,6 +62,8 @@ class Sistema: public ISistema {
 
       void finalizar();
 
+      //Funciones para precargar datos
+      void precargarDatos();
 
 }
 

@@ -22,6 +22,9 @@ class ISistema {
 
       virtual bool altaInmobiliaria(DtInmobiliaria) = 0;
 
+      virtual void altaEdificio(DtEdificio);
+      virtual void altaZona(DtZona);
+      virtual void altaDepartamento(DtDepartamento);
       virtual void altaEdificio(DtEdificio) = 0;
       virtual list<DtDepartamento> listarDepto() = 0;
       virtual void selectDepto(DtDepartamento)   = 0;
@@ -32,6 +35,9 @@ class ISistema {
       virtual void altaPropiedad(DtPropiedad, DtOferta) = 0;
 
       virtual finalizar() = 0;
+
+      //Funciones para precargar datos
+      virtual void precargarDatos();
 
 }
 
