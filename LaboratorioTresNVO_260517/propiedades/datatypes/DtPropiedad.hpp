@@ -45,7 +45,7 @@ class DtPropiedad  {
 
 		// Destructor
 
-		virtual ~DtPropiedad()=0;
+		//virtual ~DtPropiedad()=0;
 };
 //virtual istream& operator>>(istream&, DtPropiedad)=0;
 //virtual ostream& operator<<(ostream&, DtPropiedad)=0;
