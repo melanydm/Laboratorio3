@@ -18,20 +18,19 @@ class Propiedad
         void setCant_banios(int val) { cant_banios = val; }
         bool getGarage() { return garage; }
         void setGarage(bool val) { garage = val; }
-        Dtdireccion getDireccion() { return direccion; }
-        void setDireccion(Dtdireccion val) { direccion = val; }
+        DtDireccion getDireccion() { return direccion; }
+        void setDireccion(DtDireccion val) { direccion = val; }
         int getMts_edificados() { return mts_edificados; }
         void setMts_edificados(int val) { mts_edificados = val; }
         int getMts_totales() { return mts_totales; }
         void setMts_totales(int val) { mts_totales = val; }
-    protected:
     private:
         string codigo;
         int cant_ambientes;
         int cant_dormitorios;
         int cant_banios;
         bool garage;
-        Dtdireccion direccion;
+        DtDireccion direccion;
         int mts_edificados;
         int mts_totales;
 };
