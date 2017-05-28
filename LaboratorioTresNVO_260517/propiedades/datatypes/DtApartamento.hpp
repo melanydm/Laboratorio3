@@ -18,7 +18,7 @@ class DtApartamento : public DtPropiedad  {
 		   // Destructor
 
 		    virtual ~DtApartamento();
-}
+};
 
 //istream& operator>>(istream&, DtApartamento);
 //ostream& operator<<(ostream&, DtApartamento);
