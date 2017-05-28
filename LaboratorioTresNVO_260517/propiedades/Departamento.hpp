@@ -6,12 +6,12 @@ class Departamento
 {
     public:
         Departamento();
-        Departamento(DtDepartamento);
+        Departamento(DtDepartamento&);
         virtual ~Departamento();
-        string getId() { return id; };
-        void setId(string val) { id = val; };
-        string getNombre() { return nombre; };
-        void setNombre(string val) { nombre = val; };
+        string getId();
+        void setId(string);
+        string getNombre();
+        void setNombre(string);
 
     private:
         string id;
