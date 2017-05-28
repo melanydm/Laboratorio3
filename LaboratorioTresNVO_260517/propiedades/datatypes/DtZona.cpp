@@ -4,6 +4,18 @@
 
 using namespace std;
 
+//ctor
+DtZona()
+{
+	codigo="";
+	nombre="";
+}
+DtZona(DtZona val)
+{
+	this->codigo=val.getCodigo();
+	this->nombre=val.getNombre();
+}
+
 // Setters
 string DtZona::getCodigo() { return codigo; }
 string DtZona::getNombre() { return this->nombre; }
@@ -12,7 +24,9 @@ string DtZona::getNombre() { return this->nombre; }
 void DtZona::setCodigo(string codigo) { this->codigo = codigo; }
 void DtZona::setNombre(string nombre) { this->nombre = nombre; }
 
-istream& operator>>(istream&, DtZona dtd){
+
+
+/*istream& operator>>(istream&, DtZona dtd){
     string codigo = "";
     string nombre = "";
 
@@ -37,3 +51,4 @@ ostream& operator<<(ostream&, DtZona dtd) {
         << "Nombre:" << this->nombre;
     return out;
 }
+*/
