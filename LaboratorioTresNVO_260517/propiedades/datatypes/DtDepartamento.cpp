@@ -4,13 +4,17 @@
 
 using namespace std;
 
-// Setters
-int DtDepartamento::getId() { return id; }
-string DtDepartamento::getNombre() { return this->nombre; }
+DtDepartamento()
+{
+    id="";
+    nombre="";
+}
 
-// Getters
-void DtDepartamento::setId(int id) { this->id = id; }
-void DtDepartamento::setNombre(string nombre) { this->nombre = nombre; }
+DtDepartamento(DtDepartamento depto)
+{
+    this.id=depto.getId();
+    this.nombre=depto.getNombre();
+}
 /*
 istream& operator>>(istream&, DtDepartamento dtd){
     int id = 0;

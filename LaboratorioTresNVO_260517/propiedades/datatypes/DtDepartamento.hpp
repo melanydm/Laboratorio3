@@ -11,6 +11,10 @@ class DtDepartamento {
         DtDepartamento();
         DtDepartamento(DtDepartamento);
 
+        void setId(string id) { this.id = id; }
+        string getId()}{ return id; }
+        void setNombre(string nombre)}{ this.nombre=nombre }
+        string getNombre(){ return nombre; }
 		// Operators
 
 		virtual bool operator == (DtDepartamento) = 0;
