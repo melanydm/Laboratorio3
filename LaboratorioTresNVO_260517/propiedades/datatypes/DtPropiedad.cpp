@@ -1,4 +1,5 @@
 #include "DtPropiedad.hpp"
+#include "Propiedad.hpp"
 //ctor
 DtPropiedad::DtPropiedad()
 {
