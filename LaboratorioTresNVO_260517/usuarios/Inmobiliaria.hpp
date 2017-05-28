@@ -32,6 +32,6 @@ class Inmobiliaria : public Usuario {
 		// Destructor
 
 		virtual ~Inmobiliaria();
-}
+};
 
 #endif //INMOBILIARIA_HPP
