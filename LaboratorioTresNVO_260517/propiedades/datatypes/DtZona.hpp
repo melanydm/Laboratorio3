@@ -7,6 +7,7 @@ class DtZona  {
 
     public:
         DtZona();
+	DtZona(DtZona&);
 
 		// Operators
 
@@ -23,7 +24,7 @@ class DtZona  {
 		// Destructor
 
 		virtual ~DtZona();
-}
+};
   //istream& operator>>(istream&, DtZona);
   //ostream& operator<<(ostream&, DtZona);
 
