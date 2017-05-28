@@ -12,10 +12,6 @@ class Departamento
         void setId(string val) { id = val; }
         string getNombre() { return nombre; }
         void setNombre(string val) { nombre = val; }
-
-// toDataType
-     DtDepartamento toDataType();
-
     protected:
     private:
         string id;
