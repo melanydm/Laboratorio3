@@ -12,7 +12,7 @@ class DtApartamento : public DtPropiedad  {
 
 		    // Operators
 
-		    virtual bool operator == (DtApartamento) = 0;
+	//	    virtual bool operator == (DtApartamento) = 0;
 
 
 		   // Destructor
@@ -20,7 +20,7 @@ class DtApartamento : public DtPropiedad  {
 		    virtual ~DtApartamento();
 }
 
-istream& operator>>(istream&, DtApartamento);
-ostream& operator<<(ostream&, DtApartamento);
+//istream& operator>>(istream&, DtApartamento);
+//ostream& operator<<(ostream&, DtApartamento);
 
 #endif //DT_APARTAMENTO_HPP
