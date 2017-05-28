@@ -2,6 +2,20 @@
 #include <string>
 #include <iostream>
 
+//ctor
+DtEdificio::DtEdificio()
+{
+    nombre="";
+    cant_Pisos=0;
+    gastos_Comunes=0,0;
+}
+DtEdificio::DtEdificio(DtEdificio val)
+{
+    this->nombre=val.getNombre();
+    this->cant_Pisos=val.getCant_Pisos();
+    this->gastos_Comunes=val.getGastos_Comunes();
+}
+
 // Setters
 string DtEdificio::getNombre() { return this->nombre; }
 int DtEdificio::getCantPisos() { return cant_pisos; }
