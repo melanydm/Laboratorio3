@@ -9,11 +9,11 @@ class DtDepartamento {
         string nombre;
     public:
         DtDepartamento();
-        DtDepartamento(DtDepartamento);
+        DtDepartamento(DtDepartamento&);
 
-        void setId(string id) { this.id = id; }
-        string getId()}{ return id; }
-        void setNombre(string nombre)}{ this.nombre=nombre }
+        void setId(string id) { this->id = id; }
+        string getId(){ return id; }
+        void setNombre(string nombre){ this->nombre=nombre; }
         string getNombre(){ return nombre; }
 		// Operators
 
@@ -23,7 +23,7 @@ class DtDepartamento {
 		// Destructor
 
 		virtual ~DtDepartamento();
-}
+};
 
 //virtual istream& operator>>(istream&, DtDepartamento);
 //virtual ostream& operator<<(ostream&, DtDepartamento);
