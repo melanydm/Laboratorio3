@@ -14,7 +14,7 @@ class DtAdministrador : public DtUsuario {
 	// Destructor
 
 		virtual ~DtAdministrador();
-}
+};
 
 //virtual istream& operator>>(istream&, DtAdministrador);
 //virtual ostream& operator<<(ostream&, DtAdministrador);
