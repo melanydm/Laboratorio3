@@ -39,7 +39,7 @@ class DtPropiedad  {
         void setMts_totales(int);
 		// Operators
 
-		virtual bool operator == (DtPropiedad) = 0;
+	//	virtual bool operator == (DtPropiedad) = 0;
 
 
 
