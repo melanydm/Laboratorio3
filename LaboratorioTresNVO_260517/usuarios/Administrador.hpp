@@ -21,6 +21,6 @@ class Administrador : public Usuario {
 		// Destructor
 
 		virtual ~Administrador();
-}
+};
 
 #endif //ADMINISTRADOR_HPP
