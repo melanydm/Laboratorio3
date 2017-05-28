@@ -6,7 +6,7 @@ class Departamento
 {
     public:
         Departamento();
-        Departamento(DtDepartamento&);
+        Departamento(DtDepartamento);
         virtual ~Departamento();
         string getId();
         void setId(string);
