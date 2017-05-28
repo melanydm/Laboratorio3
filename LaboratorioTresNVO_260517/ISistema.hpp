@@ -22,7 +22,6 @@ class ISistema {
 
       virtual bool altaInmobiliaria(DtInmobiliaria) = 0;
 
-      virtual void altaEdificio(DtEdificio);
       virtual void altaZona(DtZona);
       virtual void altaDepartamento(DtDepartamento);
       virtual void altaEdificio(DtEdificio) = 0;
