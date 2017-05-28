@@ -1,6 +1,6 @@
 #ifndef OFERTA_HPP
 #define OFERTA_HPP
-
+#include "transa.hpp"
 #include "./datatypes/DtOferta.hpp"
 
 using namespace std;
@@ -30,6 +30,6 @@ class Oferta {
     private:
         float precio;
         Transa tipo;
-}
+};
 
 #endif //OFERTA_HPP
