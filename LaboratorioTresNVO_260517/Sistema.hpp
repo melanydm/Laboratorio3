@@ -7,8 +7,12 @@
 
 #include "./usuarios/Usuario.hpp"
 #include "./propiedades/Propiedad.hpp"
+#include "./propiedades/Departamento.hpp"
+#include "./propiedades/Zona.hpp"
+#include "./propiedades/Edificio.hpp"
 #include "./usuarios/Administrador.hpp"
 #include "./usuarios/Inmobiliaria.hpp"
+#include "./propiedades/Oferta.hpp"
 #include "./usuarios/datatypes/DtInmobiliaria.hpp"
 #include "./propiedades/datatypes/DtEdificio.hpp"
 #include "./propiedades/datatypes/DtDepartamento.hpp"
@@ -30,9 +34,9 @@ class Sistema: public ISistema {
         std::map<string, Zona*> zonas;
         std::map<string, Oferta*> ofertas;
 
-        DtZona zonaSeleccionada = NULL;
-        DtEdificio edificioSeleccionado = NULL;
-        DtDepartamento departamentoSeleccionado = NULL;
+        DtZona zonaSeleccionada;
+        DtEdificio edificioSeleccionado;
+        DtDepartamento departamentoSeleccionado;
 
     public:
         //Alta Inmobiliaria
