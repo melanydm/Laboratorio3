@@ -28,6 +28,6 @@ class DtUsuario {
 		// Destructor
 
 		virtual ~DtUsuario();
-}
+};
 
 #endif //DT_USUARIO_HPP
