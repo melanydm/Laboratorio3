@@ -69,6 +69,6 @@ class Sistema: public ISistema {
       //Funciones para precargar datos
       void precargarDatos();
 
-}
+};
 
 #endif //SISTEMA:HPP
