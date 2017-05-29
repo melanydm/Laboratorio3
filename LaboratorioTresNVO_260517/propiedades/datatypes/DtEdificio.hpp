@@ -1,34 +1,38 @@
 #ifndef DT_EDIFICIO_HPP
 #define DT_EDIFICIO_HPP
+#include "string"
 
 using namespace std;
 
-class DtEdificio  {
+class DtEdificio {
+    private:
+        string nombre;
+        string cant_Pisos;
+        string gastos_Comunes;
 
     public:
         DtEdificio();
-	DtEdificio(DtEdificio&);
-
+        DtEdificio(DtEdificio&);
 		// Operators
 
 		//virtual bool operator == (DtEdificio) = 0;
-		
+
 		// Getters
 		string getNombre();
-		int getCantPisos();
-		float getGastosComunes();
-	
+		string getCant_Pisos();
+		string getGastos_Comunes();
+
 		// Setters
 		void setNombre(string);
-		void setCantPisos(int);
-		void setGastosComunes(float);
-	
+		void setCant_Pisos(string);
+		void setGastos_Comunes(string);
+
 		// Destructor
 
 		virtual ~DtEdificio();
 };
 
-//istream& operator>>(istream&, DtEdificio);
-//ostream& operator<<(ostream&, DtEdificio);
+istream& operator>>(istream&, DtEdificio);
+ostream& operator<<(ostream&, DtEdificio);
 
 #endif //DT_EDIFICIO_HPP
