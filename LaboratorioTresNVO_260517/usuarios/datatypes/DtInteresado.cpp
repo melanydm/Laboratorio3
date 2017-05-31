@@ -32,6 +32,41 @@
 
 		// Destructor
 
-		virtual DtInteresado :: ~DtInteresado(){
+virtual DtInteresado :: ~DtInteresado(){
 
     }
+
+istream& operator>>(istream& in, DtInteresado& interesado){
+//sobraecarga del operador >>
+int i=0;
+string nombre = "";
+string apellido = "";
+string edad ="";
+while (s!="\n"&&i<4)
+{   in >> setw(1) >> s;
+    if (s==",")
+        i++;
+    if(i==0){
+        nombre=nombre+s;
+    }else if(i==1){
+        apellido=apellido+s;
+        i++;
+    }else if(i==2){
+        edad=edad+s;
+        i++;
+    }
+ }
+interesado.setNombre(nombre);
+interesado.setApellido(apellido);
+interesado.setEdad(edad);
+return in;
+}
+
+ostream& operator<<(ostream& out, DtInteresado& interesado){
+//sobraecarga del operador >>
+out <<"\nNombre: "<< interesado.getNombre()
+<<"\nApellido: "<< interesado.getApellido()
+<<"\nEdad: "<< interesado.getEdad()
+<<"\n";
+return out;
+}
