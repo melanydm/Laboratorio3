@@ -5,7 +5,7 @@ Interesado :: Interesado(){
 
 }
 
-Interesado :: Interesado(string email,string contrasenia,string nombre,string apellido, int edad):Usuario(email, contrasenia){
+Interesado :: Interesado(string email,string contrasenia,string nombre,string apellido, string edad):Usuario(email, contrasenia){
   this->nombre = nombre;
   this->apellido = apellido;
   this->edad = edad;
@@ -30,10 +30,10 @@ string Interesado :: getApellido(){
 void Interesado :: setApellido(string apellido){
  this->apellido = apellido;
 }
-int Interesado :: getEdad(){
+string Interesado :: getEdad(){
  return this->edad;
 }
-void Interesado :: setEdad(int edad){
+void Interesado :: setEdad(string edad){
  this->edad = edad;
 }
 
