@@ -15,7 +15,6 @@ DtDepartamento(DtDepartamento depto)
     this.id=depto.getId();
     this.nombre=depto.getNombre();
 }
-/*
 istream& operator>>(istream&, DtDepartamento dtd){
     int id = 0;
     string nombre = "";
@@ -41,4 +40,3 @@ ostream& operator<<(ostream&, DtDepartamento dtd) {
         << "Nombre:" << this->nombre;
     return out;
 }
-*/
