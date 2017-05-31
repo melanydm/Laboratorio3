@@ -27,5 +27,33 @@
      }
      }
 
+virtual ~DtUsuario();
 
-		virtual ~DtUsuario();
+istream& operator>>(istream& in, DtUsuario& usuario){
+//sobraecarga del operador >>
+int i=0;
+string email = "";
+string contrasenia = "";
+while (s!="\n"&&i<3){
+   in >> setw(1) >> s;
+    if (s==",")
+        i++;
+    if(i==0){
+        email=email+s;
+    }else if(i==1){
+        contrasenia=contrasenia+s;
+        i++;
+    }
+ }
+usuario.setEmail(email);
+usuario.setContrasenia(contrasenia);
+return in;
+}
+
+ostream& operator<<(ostream& out, DtUsuario& usuario){
+//sobraecarga del operador >>
+out <<"\nEmail: "<< usuario.getEmail()
+<<"\nContraseña: "<< usuario.getContrasenia()
+<<"\n";
+return out;
+}
