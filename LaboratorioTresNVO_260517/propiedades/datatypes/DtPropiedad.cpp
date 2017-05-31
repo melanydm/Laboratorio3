@@ -92,19 +92,18 @@ void DtPropiedad::setMts_Totales(string aux)
     mts_totales=aux;
 }
 
-istream& operator>>(istream& in, DtPropiedad& extra)
-//sobraecarga del operador >> para ingresar el nombrefantasia
-{
+istream& operator>>(istream& in, DtPropiedad& prop){
+//sobraecarga del operador >>
 int i=0;
 string codigo = "";
-string cant_ambientes = 0;
-string cant_dormitorios = 0;
-string cant_banios = 0;
-string garage = false;
+int cant_ambientes = 0;
+int cant_dormitorios = 0;
+int cant_banios = 0;
+bool garage = false;
 DtDireccion direccion;
-string mts_edificados = 0;
-string mts_totales = 0;
-string s = " ";
+int mts_edificados = 0;
+int mts_totales = 0;
+
 while (s!="\n"&&i<8)
 {   in >> setw(1) >> s;
     if (s==",")
@@ -112,40 +111,44 @@ while (s!="\n"&&i<8)
     if(i==0)
         codigo=codigo+s;
     else if(i==1)
-        cant_ambientes = cant_ambientes + s;
+        cant_ambientes = cant_ambientes * 10 + (int)s;
     else if(i==2)
-        cant_dormitorios = cant_dormitorios + s;
+        cant_dormitorios = cant_dormitorios * 10 + (int)s;
     else if(i==3)
-        cant_banios = cant_banios + s;
+        cant_banios = cant_banios * 10 + (int)s;
     else if(i==4)
-        garage = garage+s;
+        garage = garage;
     else if(i==5)
     {
         in>>direccion;
         i++;
     }
     else if(i==6)
-        mts_edificados = mts_edificados + s;
+        mts_edificados = mts_edificados * 10 + (int)s;
     else if(i==7)
-        mts_totales = mts_totales + s;
+        mts_totales = mts_totales * 10 + (int)s;
  }
-setCodigo(codigo);
-setCant_Ambientes(cant_ambientes);
-setCant_Dormitorios(cant_dormitorios);
-setCant_Banios(cant_banios);
-setGarage(garage);
-setDireccion(dreccion);
-setMts_Edificados(mts_edificados);
-setMts_Totales(mts_totales);
+prop.setCodigo(codigo);
+prop.setCant_ambientes(cant_ambientes);
+prop.setCant_dormitorios(cant_dormitorios);
+prop.setCant_banios(cant_banios);
+prop.setGarage(garage);
+prop.setDireccion(direccion);
+prop.setMts_edificados(mts_edificados);
+prop.setMts_totales(mts_totales);
 return in;
 }
-ostream& operator<<(ostream& out, DtExtranjero& extra)
-//sobraecarga del operador >> para imprimir el nombrefantasia
+ostream& operator<<(ostream& out, DtPropiedad& prop)
+//sobraecarga del operador >>
 {
-out <<"\nId: "<< extra.getId()
-<<"\nDireccion: "<< extra.getDireccion()
-<<"\nNombre fantasia: "<< extra.getNombreFantasia()
-<<"\n";
+out <<"\Codigo: \n"<< prop.getCodigo();
+    <<"\Cantidad de Ambientes: \n"<< prop.getCant_ambientes();
+    <<"\Cantidad de Dormitorios: \n"<< prop.getCant_dormitorios();
+    <<"\Cantidad de Baños: \n"<< prop.getCant_banios();
+    <<"\Tiene Garege: \n"<< prop.getGarage();
+    <<"\nDireccion: "<< prop.getDireccion();
+    <<"\Cantidad de Metros Edificados: "<< prop.getMts_edificados();
+    <<"\Cantidad de Metros Totales: "<< prop.getMts_totales();
 return out;
 }
 
