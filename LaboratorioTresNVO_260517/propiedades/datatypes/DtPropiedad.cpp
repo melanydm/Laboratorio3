@@ -11,16 +11,16 @@ DtPropiedad::DtPropiedad()
     mts_edificados="";
     mts_totales="";
 }
-DtPropiedad::DtPropiedad(DtPropiedad &prop)
+DtPropiedad::DtPropiedad (DtPropiedad &prop)
 {
-    this->codigo=prop.getCodigo();
-    this->cant_ambientes=prop.getCant_Ambientes();
-    this->cant_dormitorios=prop.getCant_Dormitorios();
-    this->cant_banios=prop.getCant_Banios();
-    this->garage=prop.getGarage();
-    this->direccion=prop.getDireccion();
-    this->mts_edificados=prop.getMts_Edificados();
-    this->mts_totales=prop.getMts_Totales();
+    this->codigo = prop->getCodigo();
+    this->cant_ambientes = prop->getCant_Ambientes();
+    this->cant_dormitorios = prop->getCant_Dormitorios();
+    this->cant_banios = prop->getCant_Banios();
+    this->garage = prop->getGarage();
+    this->direccion = prop->getDireccion();
+    this->mts_edificados = prop->getMts_Edificados();
+    this->mts_totales = prop->getMts_Totales();
 }
 //getters
 string DtPropiedad::getCodigo()

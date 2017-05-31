@@ -7,6 +7,8 @@
 
 #include "./usuarios/Usuario.hpp"
 #include "./propiedades/Propiedad.hpp"
+#include "./propiedades/Casa.hpp"
+#include "./propiedades/Apartamento.hpp"
 #include "./usuarios/Administrador.hpp"
 #include "./usuarios/Inmobiliaria.hpp"
 #include "./usuarios/datatypes/DtInmobiliaria.hpp"
@@ -14,6 +16,8 @@
 #include "./propiedades/datatypes/DtDepartamento.hpp"
 #include "./propiedades/datatypes/DtZona.hpp"
 #include "./propiedades/datatypes/DtPropiedad.hpp"
+#include "./propiedades/datatypes/DtCasa.hpp"
+#include "./propiedades/datatypes/DtApartamento.hpp"
 #include "./propiedades/datatypes/DtOferta.hpp"
 
 #include "ISistema.hpp"

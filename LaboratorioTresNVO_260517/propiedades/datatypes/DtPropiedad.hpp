@@ -2,7 +2,7 @@
 #define DT_PROPIEDAD_HPP
 #include "string"
 #include "iomanip"
-#include "D:\Tecnologo\PAV\28-05\LaboratorioTres_260517\utils\datatypes\DtDireccion.hpp"
+#include "../../utils/datatypes/DtDireccion.hpp"
 
 using namespace std;
 
@@ -23,23 +23,23 @@ class DtPropiedad  {
 
         //getters
         string getCodigo();
-        string getCant_Ambientes();
-        string getCant_Dormitorios();
-        string getCant_Banios();
-        string getGarage();
+        int getCant_Ambientes();
+        int getCant_Dormitorios();
+        int getCant_Banios();
+        bool getGarage();
         DtDireccion getDireccion();
-        string getMts_Edificados();
-        string getMts_Totales();
+        int getMts_Edificados();
+        int getMts_Totales();
 
         //setters
         void setCodigo(string);
-        void setCant_Ambientes(string);
-        void setCant_Dormitorios(string);
-        void setCant_Banios(string);
-        void setGarage(string);
+        void setCant_Ambientes(int);
+        void setCant_Dormitorios(int);
+        void setCant_Banios(int);
+        void setGarage(bool);
         void setDireccion(DtDireccion);
-        void setMts_Edificados(string);
-        void setMts_Totales(string);
+        void setMts_Edificados(int);
+        void setMts_Totales(int);
 		// Operators
 
 //		virtual bool operator == (DtPropiedad) = 0;
