@@ -26,7 +26,7 @@ void DtZona::setNombre(string nombre) { this->nombre = nombre; }
 
 
 
-/*istream& operator>>(istream&, DtZona dtd){
+istream& operator>>(istream&, DtZona dtd){
     string codigo = "";
     string nombre = "";
 
@@ -51,4 +51,3 @@ ostream& operator<<(ostream&, DtZona dtd) {
         << "Nombre:" << this->nombre;
     return out;
 }
-*/
