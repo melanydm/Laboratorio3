@@ -12,20 +12,20 @@ class Interesado : public Usuario {
     private:
         string nombre;
         string apellido;
-        int edad;
+        string edad;
 
     public:
     Interesado();
-		Interesado(string,string,string,string, int);
+		Interesado(string,string,string,string, string);
 		Interesado(DtInteresado);
 
         // geters seters
-		string getNombre();
+	string getNombre();
         string getApellido();
-        int getEdad();
+        string getEdad();
         void getNombre(string);
         void getApellido(string);
-        void getEdad(int);
+        void getEdad(string);
 
         // toDataType
 
