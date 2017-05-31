@@ -35,4 +35,22 @@ bool DtFecha:: operator == (DtFecha fecha){
   return true;
 }
 
+istream& operator>>(istream& in, DtFecha f) {
+		int aux;
+		in>> setw(2) >> aux;
+		f.setDd(aux);
+		in.ignore(1);
+		in>>setw(2) >> aux;
+		f.setMm(aux);
+		in.ignore(1);
+		in>>setw(4) >> aux;
+		f.setAa(aux);
+		return in;
+}
+
+ostream& operator<<(ostream& out, DtFecha f) {
+	out << f.getDd() << "/"
+		<< f.getMm() << "/"
+		<< f.getAa() << "\r\n";
+	return out;
 }
