@@ -2,6 +2,9 @@
 #define DT_PROPIEDAD_HPP
 #include "string"
 #include "iomanip"
+#include "iostream"
+#include "sstream"
+
 #include "../../utils/datatypes/DtDireccion.hpp"
 
 using namespace std;
@@ -9,13 +12,16 @@ using namespace std;
 class DtPropiedad  {
     private:
         string codigo;
-        string cant_ambientes;
-        string cant_dormitorios;
-        string cant_banios;
-        string garage;
+        int cant_ambientes;
+        int cant_dormitorios;
+        int cant_banios;
+        bool garage;
         DtDireccion direccion;
-        string mts_edificados;
-        string mts_totales;
+        int mts_edificados;
+        int mts_totales;
+        int toInt(string);
+        string printDireccion(DtDireccion&);
+
 
     public:
         DtPropiedad();
@@ -23,23 +29,23 @@ class DtPropiedad  {
 
         //getters
         string getCodigo();
-        int getCant_Ambientes();
-        int getCant_Dormitorios();
-        int getCant_Banios();
+        int getCant_ambientes();
+        int getCant_dormitorios();
+        int getCant_banios();
         bool getGarage();
         DtDireccion getDireccion();
-        int getMts_Edificados();
-        int getMts_Totales();
+        int getMts_edificados();
+        int getMts_totales();
 
         //setters
         void setCodigo(string);
-        void setCant_Ambientes(int);
-        void setCant_Dormitorios(int);
-        void setCant_Banios(int);
+        void setCant_ambientes(int);
+        void setCant_dormitorios(int);
+        void setCant_banios(int);
         void setGarage(bool);
         void setDireccion(DtDireccion);
-        void setMts_Edificados(int);
-        void setMts_Totales(int);
+        void setMts_edificados(int);
+        void setMts_totales(int);
 		// Operators
 
 //		virtual bool operator == (DtPropiedad) = 0;
@@ -50,6 +56,7 @@ class DtPropiedad  {
 
 //		virtual ~DtPropiedad()=0;
 };
+
 istream& operator>>(istream&, DtPropiedad);
 ostream& operator<<(ostream&, DtPropiedad);
 

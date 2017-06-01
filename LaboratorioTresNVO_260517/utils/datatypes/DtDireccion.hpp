@@ -26,5 +26,7 @@ class DtDireccion {
 
 		bool operator == (DtDireccion);
 };
+istream& operator>>(istream&, DtDireccion&);
+ostream& operator<<(ostream&, DtDireccion&);
 
 #endif //DT_DIRECCION_HPP

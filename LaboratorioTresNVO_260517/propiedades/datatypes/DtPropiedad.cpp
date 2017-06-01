@@ -2,25 +2,25 @@
 //ctor
 DtPropiedad::DtPropiedad()
 {
-    codigo="";
-    cant_ambientes="";
-    cant_dormitorios="";
-    cant_banios="";
+    codigo = "";
+    cant_ambientes = 0;
+    cant_dormitorios = 0;
+    cant_banios = 0;
     garage="No";
     direccion;
-    mts_edificados="";
-    mts_totales="";
+    mts_edificados = 0;
+    mts_totales = 0;
 }
 DtPropiedad::DtPropiedad (DtPropiedad &prop)
 {
-    this->codigo = prop->getCodigo();
-    this->cant_ambientes = prop->getCant_Ambientes();
-    this->cant_dormitorios = prop->getCant_Dormitorios();
-    this->cant_banios = prop->getCant_Banios();
-    this->garage = prop->getGarage();
-    this->direccion = prop->getDireccion();
-    this->mts_edificados = prop->getMts_Edificados();
-    this->mts_totales = prop->getMts_Totales();
+    this->codigo = prop.getCodigo();
+    this->cant_ambientes = prop.getCant_ambientes();
+    this->cant_dormitorios = prop.getCant_dormitorios();
+    this->cant_banios = prop.getCant_banios();
+    this->garage = prop.getGarage();
+    this->direccion = prop.getDireccion();
+    this->mts_edificados = prop.getMts_edificados();
+    this->mts_totales = prop.getMts_totales();
 }
 //getters
 string DtPropiedad::getCodigo()
@@ -28,20 +28,20 @@ string DtPropiedad::getCodigo()
     return codigo;
 }
 
-string DtPropiedad::getCant_Ambientes()
+int DtPropiedad::getCant_ambientes()
 {
     return cant_ambientes;
 }
 
-string DtPropiedad::getCant_Dormitorios()
+int DtPropiedad::getCant_dormitorios()
 {
     return cant_dormitorios;
 }
-string DtPropiedad::getCant_Banios()
+int DtPropiedad::getCant_banios()
 {
      return cant_banios;
 }
-string DtPropiedad::getGarage()
+bool DtPropiedad::getGarage()
 {
     return garage;
 }
@@ -49,11 +49,11 @@ DtDireccion DtPropiedad::getDireccion()
 {
     return direccion;
 }
-string DtPropiedad::getMts_Edificados()
+int DtPropiedad::getMts_edificados()
 {
     return mts_edificados;
 }
-string DtPropiedad::getMts_Totales()
+int DtPropiedad::getMts_totales()
 {
     return mts_totales;
 }
@@ -61,35 +61,42 @@ string DtPropiedad::getMts_Totales()
 //setters
 void DtPropiedad::setCodigo(string aux)
 {
-    codigo=aux;
+    codigo = aux;
 }
-void DtPropiedad::setCant_Ambientes(string aux)
+void DtPropiedad::setCant_ambientes(int aux)
 {
-    cant_ambientes=aux;
+    cant_ambientes = aux;
 }
-void DtPropiedad::setCant_Dormitorios(string aux)
+void DtPropiedad::setCant_dormitorios(int aux)
 {
-    cant_dormitorios=aux;
+    cant_dormitorios = aux;
 }
-void DtPropiedad::setCant_Banios(string aux)
+void DtPropiedad::setCant_banios(int aux)
 {
-    cant_banios=aux;
+    cant_banios = aux;
 }
-void DtPropiedad::setGarage(string aux)
+void DtPropiedad::setGarage(bool aux)
 {
-    garage=aux;
+    garage = aux;
 }
 void DtPropiedad::setDireccion(DtDireccion aux)
 {
-    direccion=aux;
+    direccion = aux;
 }
-void DtPropiedad::setMts_Edificados(string aux)
+void DtPropiedad::setMts_edificados(int aux)
 {
-    mts_edificados=aux;
+    mts_edificados = aux;
 }
-void DtPropiedad::setMts_Totales(string aux)
+void DtPropiedad::setMts_totales(int aux)
 {
     mts_totales=aux;
+}
+
+int toInt(string s) {
+    int aux = 0;
+    stringstream ss(s);
+    ss >> aux;
+    return aux;
 }
 
 istream& operator>>(istream& in, DtPropiedad& prop){
@@ -104,29 +111,34 @@ DtDireccion direccion;
 int mts_edificados = 0;
 int mts_totales = 0;
 
+string s;
+int aux;
+
 while (s!="\n"&&i<8)
 {   in >> setw(1) >> s;
     if (s==",")
         i++;
     if(i==0)
         codigo=codigo+s;
-    else if(i==1)
-        cant_ambientes = cant_ambientes * 10 + (int)s;
-    else if(i==2)
-        cant_dormitorios = cant_dormitorios * 10 + (int)s;
+    else if(i==1){
+        cant_ambientes = cant_ambientes * 10 + toInt(s);
+    }
+    else if(i==2){
+        cant_dormitorios = cant_dormitorios * 10 + toInt(s);
+    }
     else if(i==3)
-        cant_banios = cant_banios * 10 + (int)s;
+        cant_banios = cant_banios * 10 + toInt(s);
     else if(i==4)
         garage = garage;
     else if(i==5)
     {
-        in>>direccion;
+        in >> direccion;
         i++;
     }
     else if(i==6)
-        mts_edificados = mts_edificados * 10 + (int)s;
+        mts_edificados = mts_edificados * 10 + toInt(s);
     else if(i==7)
-        mts_totales = mts_totales * 10 + (int)s;
+        mts_totales = mts_totales * 10 + toInt(s);
  }
 prop.setCodigo(codigo);
 prop.setCant_ambientes(cant_ambientes);
@@ -138,17 +150,24 @@ prop.setMts_edificados(mts_edificados);
 prop.setMts_totales(mts_totales);
 return in;
 }
+
+string printDireccion(DtDireccion dir){
+    string strdir;
+    cout << dir << strdir;
+    return strdir;
+}
+
 ostream& operator<<(ostream& out, DtPropiedad& prop)
 //sobraecarga del operador >>
 {
-out <<"\Codigo: \n"<< prop.getCodigo();
-    <<"\Cantidad de Ambientes: \n"<< prop.getCant_ambientes();
-    <<"\Cantidad de Dormitorios: \n"<< prop.getCant_dormitorios();
-    <<"\Cantidad de Baños: \n"<< prop.getCant_banios();
-    <<"\Tiene Garege: \n"<< prop.getGarage();
-    <<"\nDireccion: "<< prop.getDireccion();
-    <<"\Cantidad de Metros Edificados: "<< prop.getMts_edificados();
-    <<"\Cantidad de Metros Totales: "<< prop.getMts_totales();
+out <<"\nCodigo: "<< prop.getCodigo()
+    <<"\nCantidad de Ambientes: "<< prop.getCant_ambientes()
+    <<"\nantidad de Dormitorios: "<< prop.getCant_dormitorios()
+    <<"\nantidad de Baños: "<< prop.getCant_banios()
+    <<"\niene Garege: "<< prop.getGarage()
+    <<"\nDireccion: "<< printDireccion(prop.getDireccion())
+    <<"\nantidad de Metros Edificados: "<< prop.getMts_edificados()
+    <<"\nantidad de Metros Totales: "<< prop.getMts_totales() << "\n";
 return out;
 }
 
