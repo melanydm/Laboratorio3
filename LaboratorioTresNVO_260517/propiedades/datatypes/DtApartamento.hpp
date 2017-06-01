@@ -2,6 +2,9 @@
 #define DT_APARTAMENTO_HPP
 
 #include "DtPropiedad.hpp"
+/*
+#include "../../utils/ToBasicDt.hpp"
+#include "../../utils/datatypes/DtDireccion.hpp"*/
 
 using namespace std;
 

@@ -1,8 +1,5 @@
 #include "DtEdificio.hpp"
 
-#include <iostream>
-#include <iomanip>
-#include <string>
 
 DtEdificio::DtEdificio()
 {
@@ -42,22 +39,22 @@ istream& operator>>(istream& in, DtEdificio& dte){
 		if (i == 0)
 			nombre = nombre + s;
 		else if (i == 1)
-			cant_pisos = cant_pisos * 10 + (int)s;
+			cant_pisos = cant_pisos * 10 + toInt(s);
 		else if (i == 2)
-			gastos_comunes = gastos_comunes * 10 + (float)s;
+			gastos_comunes = gastos_comunes * 10 + toFloat(s);
 			// en este caso habrá que ver los decimales.
 	}
 	
-	dte->setNombre(nombre);
-	dte->setCantPisos(cant_pisos) = cant_pisos;
-	dte->setGastosComunes(gastos_comunes) = gastos_comunes;
+	dte.setNombre(nombre);
+	dte.setCant_Pisos(cant_pisos);
+	dte.setGastos_Comunes(gastos_comunes);
 }
 
 // Sobrecarga cout
 ostream& operator<<(ostream& out, DtEdificio& dte){
-    out << "Nombre:" << this->nombre << "\r\n"
-	<< "Cant. pisos:" << this->cant_pisos << "\r\n"
-	<< "Gastos comunes:" << this->gastos_comunes;
+    out << "Nombre:" << dte.getNombre() << "\r\n"
+	<< "Cant. pisos:" << dte.getCant_Pisos() << "\r\n"
+	<< "Gastos comunes:" << dte.getGastos_Comunes();
     return out;
 }
 

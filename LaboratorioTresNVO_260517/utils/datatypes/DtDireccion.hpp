@@ -7,25 +7,26 @@ using namespace std;
 
 
 class DtDireccion {
-    private:
-        string calle;
-        string numero;
+  private:
+    string calle;
+    string numero;
 
-    public:
-        DtDireccion();
+  public:
+    DtDireccion();
+    string getDepartamento();
+    string getCalle();
+    string getNumero();
+    void setDepartamento(string); 
+    void setCalle(string);
+    void setNumero(string);
 
-	string getDepartamento();
-        string getCalle();
-        string getNumero();
-	void setDepartamento(string);
-        void setCalle(string);
-        void setNumero(string);
-
-        virtual ~DtDireccion();
-		// Operators
+    virtual ~DtDireccion();
+	  // Operators
 
 		bool operator == (DtDireccion);
 };
+
+string printDireccion(DtDireccion);
 istream& operator>>(istream&, DtDireccion&);
 ostream& operator<<(ostream&, DtDireccion&);
 

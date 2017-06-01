@@ -4,18 +4,17 @@
 
 using namespace std;
 
-DtDepartamento()
-{
-    id="";
-    nombre="";
+DtDepartamento::DtDepartamento(){
+    id = 0;
+    nombre = "";
 }
 
-DtDepartamento(DtDepartamento depto)
+DtDepartamento::DtDepartamento(DtDepartamento& depto)
 {
-    this.id=depto.getId();
-    this.nombre=depto.getNombre();
+    this->id = depto.getId();
+    this->nombre = depto.getNombre();
 }
-istream& operator>>(istream&, DtDepartamento dtd){
+istream& operator>>(istream& in, DtDepartamento dtd){
     int id = 0;
     string nombre = "";
 
@@ -26,17 +25,17 @@ istream& operator>>(istream&, DtDepartamento dtd){
 		if (s == ",")
 			i++;
 		if (i == 0)
-			id = id * 10 + (int)s;
+			id = id * 10 + toInt(s);
 		else if (i == 1)
 			nombre = nombre + s;
 	}
 
-    dtd->setId(id);
-    dtd->setNombre(nombre);
+    dtd.setId(id);
+    dtd.setNombre(nombre);
 }
 
-ostream& operator<<(ostream&, DtDepartamento dtd) {
-    out << "Id:" << this->id << "\r\n"
-        << "Nombre:" << this->nombre;
+ostream& operator<<(ostream& out, DtDepartamento dtd) {
+    out << "Id:" << dtd.getId()<< "\r\n"
+        << "Nombre:" << dtd.getNombre();
     return out;
 }

@@ -26,6 +26,12 @@ void DtDireccion ::  setNumero(string numero){
   this->numero = numero;
 }
 
+string printDireccion(DtDireccion dir){
+    string strdir;
+    cout << dir << strdir;
+    return strdir;
+}
+
 virtual DtDireccion ::  ~DtDireccion();
 
 		// Operators

@@ -1,19 +1,16 @@
 #include "DtZona.hpp"
-#include <string>
-#include <iostream>
 
-using namespace std;
 
 //ctor
-DtZona()
+DtZona::DtZona()
 {
-	codigo="";
-	nombre="";
+	this->codigo = "";
+	this->nombre = "";
 }
-DtZona(DtZona val)
+DtZona::DtZona(DtZona& dtz)
 {
-	this->codigo=val.getCodigo();
-	this->nombre=val.getNombre();
+	this->codigo = dtz.getCodigo();
+	this->nombre = dtz.getNombre();
 }
 
 // Setters
@@ -26,7 +23,7 @@ void DtZona::setNombre(string nombre) { this->nombre = nombre; }
 
 
 
-istream& operator>>(istream&, DtZona dtd){
+istream& operator>>(istream& in, DtZona dtz){
     string codigo = "";
     string nombre = "";
 
@@ -42,12 +39,12 @@ istream& operator>>(istream&, DtZona dtd){
 			nombre = nombre + s;
 	}
 
-    dtd->setId(codigo);
-    dtd->setNombre(nombre);
+    dtz.setCodigo(codigo);
+    dtz.setNombre(nombre);
 }
 
-ostream& operator<<(ostream&, DtZona dtd) {
-    out << "Codigo:" << this->codigo << "\r\n"
-        << "Nombre:" << this->nombre;
+ostream& operator<<(ostream& out, DtZona dtz) {
+    out << "Codigo:" << dtz.getCodigo() << "\r\n"
+        << "Nombre:" << dtz.getNombre();
     return out;
 }

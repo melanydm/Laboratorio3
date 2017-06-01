@@ -2,6 +2,8 @@
 #define DT_ZONA_HPP
 
 #include "string"
+#include "iomanip"
+#include "iostream"
 
 using namespace std;
 
@@ -26,8 +28,13 @@ class DtZona  {
 		// Destructor
 
 		virtual ~DtZona();
+
+	private:
+		string codigo;
+		string nombre;
 };
-  //istream& operator>>(istream&, DtZona);
-  //ostream& operator<<(ostream&, DtZona);
+
+istream& operator>>(istream&, DtZona);
+ostream& operator<<(ostream&, DtZona);
 
 #endif //DT_ZONA_HPP

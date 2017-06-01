@@ -9,68 +9,61 @@ DtCasa::DtCasa() : DtPropiedad()
 
 DtCasa::DtCasa (DtCasa &casa) : DtPropiedad(casa)
 {
-    this.mts_espaciosVerdes = casa.getMts_espaciosVerdes;
+    this->mts_espaciosVerdes = casa.getMts_espaciosVerdes();
 }
    //getters
 int DtCasa::getMts_espaciosVerdes()
 {
-    return this.mts_espaciosVerdes;
+    return this->mts_espaciosVerdes;
 }
     //setters
 void DtCasa::setMts_espaciosVerdes(int aux)
 {
-    this.mts_espaciosVerdes = aux;
+    this->mts_espaciosVerdes = aux;
 }
 istream& operator>>(istream& in, DtCasa& oDtCasa){
 //sobraecarga del operador >> 
-        string codigo = "";
-        int cant_ambientes = 0;
-        int cant_dormitorios= 0;
-        int cant_banios= 0;
-        bool garage;
-        DtDireccion direccion;
-        int mts_edificados = 0;
-        int mts_totales = 0;
-        int mts_espaciosVerdes = 0;
-        string s=" ";
-    while (s!="\n" && i<9){    
+    string codigo = "";
+    int cant_ambientes = 0;
+    int cant_dormitorios= 0;
+    int cant_banios= 0;
+    bool garage;
+    DtDireccion direccion;
+    int mts_edificados = 0;
+    int mts_totales = 0;
+    int mts_espaciosVerdes = 0;
+    string s;
+    int aux;
+    int i = 0;
+
+    while (s!="\n"&&i<9) {
         in >> setw(1) >> s;
+
         if (s==",")
             i++;
         if(i==0)
             codigo=codigo+s;
         else if(i==1){
-            cant_ambientes = cant_ambientes + s;
-            i++;
+            cant_ambientes = cant_ambientes * 10 + toInt(s);
         }
         else if(i==2){
-            cant_dormitorios = cant_dormitorios * 10 + (int)s;
-            i++;
+            cant_dormitorios = cant_dormitorios * 10 + toInt(s);
         }
-        else if(i==3){
-            cant_banios = cant_banios * 10 + (int)s;
-            i++;
-        }
-        else if(i==4){
-            garage = garage && (bool)s;
-            i++;
-        }
-        else if(i==5){
+        else if(i==3)
+            cant_banios = cant_banios * 10 + toInt(s);
+        else if(i==4)
+            garage = garage;
+        else if(i==5)
+        {
             in >> direccion;
             i++;
         }
-        else if(i==6){
-            mts_edificados = mts_edificados * 10 + (int)s;
-            i++;
-        }
-        else if(i==7){
-            mts_totales = mts_totales * 10+ (int)s;
-            i++;
-        }
-        else if(i==8){
-            mts_espaciosVerdes = mts_espaciosVerdes * 10 + (int)s;
-            i++;
-        }
+        else if(i==6)
+            mts_edificados = mts_edificados * 10 + toInt(s);
+        else if(i==7)
+            mts_totales = mts_totales * 10 + toInt(s);
+        else if(i==8)
+            mts_espaciosVerdes = mts_espaciosVerdes * 10 + toInt(s);
     }
     oDtCasa.setCodigo(codigo);
     oDtCasa.setCant_ambientes(cant_ambientes);
@@ -86,15 +79,15 @@ istream& operator>>(istream& in, DtCasa& oDtCasa){
 ostream& operator<<(ostream& out, DtCasa& oDtCasa)
 //sobraecarga del operador >> 
 {
-    out <<"\Codigo: \n"<< oDtCasa.getCodigo();
-        <<"\Cantidad de Ambientes: \n"<< oDtCasa.getCant_ambientes();
-        <<"\Cantidad de Dormitorios: \n"<< oDtCasa.getCant_dormitorios();
-        <<"\Cantidad de Baños: \n"<< oDtCasa.getCant_banios();
-        <<"\Tiene Garege: \n"<< oDtCasa.getGarage();
-        <<"\nDireccion: "<< oDtCasa.getDireccion();
-        <<"\Cantidad de Metros Edificados: "<< oDtCasa.getMts_edificados();
-        <<"\Cantidad de Metros Totales: "<< oDtCasa.getMts_totales();
-        <<"\Cantidad de Metros de Espacios Verdes: "<< oDtCasa.getMts_espaciosVerdes();
+    out <<"\nCodigo: \n"<< oDtCasa.getCodigo()
+        <<"\nCantidad de Ambientes: \n"<< oDtCasa.getCant_ambientes()
+        <<"\nCantidad de Dormitorios: \n"<< oDtCasa.getCant_dormitorios()
+        <<"\nCantidad de Baños: \n"<< oDtCasa.getCant_banios()
+        <<"\nTiene Garege: \n"<< oDtCasa.getGarage()
+        <<"\nDireccion: "<< printDireccion(oDtCasa.getDireccion())
+        <<"\nCantidad de Metros Edificados: "<< oDtCasa.getMts_edificados()
+        <<"\nCantidad de Metros Totales: "<< oDtCasa.getMts_totales()
+        <<"\nCantidad de Metros de Espacios Verdes: "<< oDtCasa.getMts_espaciosVerdes()
         <<"\n";
     return out;
 }

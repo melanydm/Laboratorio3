@@ -1,6 +1,9 @@
 #ifndef DT_EDIFICIO_HPP
 #define DT_EDIFICIO_HPP
 #include "string"
+#include "iostream"
+#include "iomanip"
+#include "../../utils/ToBasicDt.hpp"
 
 using namespace std;
 

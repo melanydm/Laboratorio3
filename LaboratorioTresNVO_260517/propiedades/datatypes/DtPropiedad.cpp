@@ -92,12 +92,6 @@ void DtPropiedad::setMts_totales(int aux)
     mts_totales=aux;
 }
 
-int toInt(string s) {
-    int aux = 0;
-    stringstream ss(s);
-    ss >> aux;
-    return aux;
-}
 
 istream& operator>>(istream& in, DtPropiedad& prop){
 //sobraecarga del operador >>
@@ -149,12 +143,6 @@ prop.setDireccion(direccion);
 prop.setMts_edificados(mts_edificados);
 prop.setMts_totales(mts_totales);
 return in;
-}
-
-string printDireccion(DtDireccion dir){
-    string strdir;
-    cout << dir << strdir;
-    return strdir;
 }
 
 ostream& operator<<(ostream& out, DtPropiedad& prop)

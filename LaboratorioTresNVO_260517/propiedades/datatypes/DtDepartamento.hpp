@@ -1,20 +1,27 @@
 #ifndef DT_DEPARTAMENTO_HPP
 #define DT_DEPARTAMENTO_HPP
 
+
+#include "string"
+#include "iostream"
+#include "iomanip"
+
+#include "../../utils/ToBasicDt.hpp"
+
 using namespace std;
 
 class DtDepartamento {
     private:
-        string id;
+        int id;
         string nombre;
     public:
         DtDepartamento();
         DtDepartamento(DtDepartamento&);
 
-        void setId(string id) { this->id = id; }
-        string getId(){ return id; }
-        void setNombre(string nombre){ this->nombre=nombre; }
-        string getNombre(){ return nombre; }
+        void setId(int id) { this->id = id; }
+        int getId(){ return this->id; }
+        void setNombre(string nombre){ this->nombre = nombre; }
+        string getNombre(){ return this->nombre; }
 		// Operators
 
 		//virtual bool operator == (DtDepartamento) = 0;
@@ -25,7 +32,7 @@ class DtDepartamento {
 		virtual ~DtDepartamento();
 };
 
-//virtual istream& operator>>(istream&, DtDepartamento);
-//virtual ostream& operator<<(ostream&, DtDepartamento);
+istream& operator>>(istream&, DtDepartamento);
+ostream& operator<<(ostream&, DtDepartamento);
 
 #endif //DT_DEPARTAMENTO_HPP

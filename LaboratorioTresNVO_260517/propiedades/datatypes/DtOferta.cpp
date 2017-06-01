@@ -1,18 +1,27 @@
 #include "DtOferta.hpp"
-#include <string>
-#include <iostream>
 
 using namespace std;
 
+// Constructor
+DtOferta() {
+    this->tipo = 'Alquiler';
+    this->precio = 0;
+}
+
+DtOferta(DtOferta& dto) {
+    this->tipo = dto.getTipo();
+    this->precio = dto.getPrecio();
+}
+
 // Setters
-Transa DtOferta::getTipo() { return tipo; }
+Transa DtOferta::getTipo() { return this->tipo; }
 float DtOferta::getPrecio() { return this->precio; }
 
 // Getters
 void DtOferta::setCodigo(Transa tipo) { this->tipo = tipo; }
 void DtOferta::setNombre(float precio) { this->precio = precio; }
 
-istream& operator>>(istream&, DtOferta dtd){
+istream& operator>>(istream& in, DtOferta dto){
     Transa tipo = Venta;
     float precio = 0;
 
@@ -30,12 +39,12 @@ istream& operator>>(istream&, DtOferta dtd){
 			precio = precio * 10 + (int)s;
 	}
 
-    dtd->setTipo(tipo);
-    dtd->setPrecio(precio);
+    dto.setTipo(tipo);
+    dto.setPrecio(precio);
 }
 
-ostream& operator<<(ostream&, DtOferta dtd) {
-    out << "Tipo:" << this->tipo << "\r\n"
-        << "Precio:" << this->precio;
+ostream& operator<<(ostream& out, DtOferta dto) {
+    out << "Tipo:" << dto.getTipo() << "\r\n"
+        << "Precio:" << dto.getPrecio() << "\n";
     return out;
 }
