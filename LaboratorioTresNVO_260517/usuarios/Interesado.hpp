@@ -15,17 +15,17 @@ class Interesado : public Usuario {
         string edad;
 
     public:
-    Interesado();
-		Interesado(string,string,string,string, string);
-		Interesado(DtInteresado);
+    	Interesado();
+	Interesado(string,string,string,string, string);
+	Interesado(DtInteresado);
 
         // geters seters
 	string getNombre();
         string getApellido();
         string getEdad();
-        void getNombre(string);
-        void getApellido(string);
-        void getEdad(string);
+        void setNombre(string);
+        void setApellido(string);
+        void setEdad(string);
 
         // toDataType
 

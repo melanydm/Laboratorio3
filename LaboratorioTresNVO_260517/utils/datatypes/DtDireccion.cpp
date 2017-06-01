@@ -3,15 +3,21 @@
 #include <string>
 
 DtDireccion :: DtDireccion(){
+  this->departamento = "";
   this->calle = "";
   this->numero = "";
 }
-
+string DtDireccion ::  getDepartamento(){
+  return   this->departamento;
+}
 string DtDireccion ::  getCalle(){
   return   this->calle;
 }
 string DtDireccion ::  getNumero(){
   return   this->numero;
+}
+void DtDireccion ::  setDepartamento(string departamento){
+  this->departamento = departamento;
 }
 void DtDireccion ::  setCalle(string calle){
   this->calle = calle;
@@ -26,7 +32,6 @@ virtual DtDireccion ::  ~DtDireccion();
 bool DtDireccion ::  operator == (DtDireccion dir){
 return true;
 }
-
 
 istream& operator>>(istream& in, DtDireccion& dir) {
 		int i = 0, j = 0;
@@ -52,7 +57,7 @@ istream& operator>>(istream& in, DtDireccion& dir) {
 			}
             j++;
         }
-		dir.setDepartamento(ciudad);
+		dir.setDepartamento(departamento);
 		dir.setNumero(numero);
 		dir.setCalle(calle);
 		//cout << "antes del return"<<pais<<ciudad<<numero << calle;
@@ -62,9 +67,11 @@ istream& operator>>(istream& in, DtDireccion& dir) {
 
 ostream& operator<<(ostream& out, DtDireccion& dir) {
 	//cout << "sobrecarga de direccion\n";
-	out <<"Ciudad: "<<dir.getDepartamento() << "\n"
+	out <<"Departamento: "<<dir.getDepartamento() << "\n"
 		<<"Numero de Puerta: "<<dir.getNumero() << "\n"
 		<<"Calle: "<<dir.getCalle() << "\n";
 	//cout << "sobrecargo direccion\n";
 	return out;
 }
+
+

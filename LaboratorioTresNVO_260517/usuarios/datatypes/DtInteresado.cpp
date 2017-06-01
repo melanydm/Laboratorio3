@@ -6,7 +6,7 @@
     DtInteresado :: DtInteresado(): DtUsuario(){
       this->nombre = "";
       this->apellido = "";
-      this->edad = 0;
+      this->edad = "";
     }
 
 
@@ -17,7 +17,7 @@
     string DtInteresado :: getApellido(){
       return this->apellido;
     }
-    int DtInteresado :: getEdad(){
+    string DtInteresado :: getEdad(){
       return this->edad;
     }
     void DtInteresado :: getNombre(string nombre){
@@ -26,19 +26,21 @@
     void DtInteresado :: getApellido(string apellido){
       this->apellido = apellido;
     }
-    void DtInteresado :: getEdad(int edad){
+    void DtInteresado :: getEdad(string edad){
       this->edad = edad;
     }
 
 		// Destructor
 
-virtual DtInteresado :: ~DtInteresado(){
+		virtual DtInteresado :: ~DtInteresado(){
 
     }
+
 
 istream& operator>>(istream& in, DtInteresado& interesado){
 //sobraecarga del operador >>
 int i=0;
+string s= "";
 string nombre = "";
 string apellido = "";
 string edad ="";

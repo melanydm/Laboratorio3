@@ -6,6 +6,6 @@
 
   }
 
-		virtual ~DtAdministrador(){
+virtual ~DtAdministrador(){
 
     }

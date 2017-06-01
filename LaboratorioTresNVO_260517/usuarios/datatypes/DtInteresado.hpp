@@ -12,22 +12,22 @@ class DtInteresado : public DtUsuario {
     private:
         string nombre;
         string apellido;
-        int edad;
+        string edad;
 
     public:
         DtInteresado();
 
 
         // geters seters
-		string getNombre();
+	string getNombre();
         string getApellido();
-        int getEdad();
+        string getEdad();
         void getNombre(string);
         void getApellido(string);
-        void getEdad(int);
+        void getEdad(string);
 
-		virtual ~DtInteresado();
-}
+virtual ~DtInteresado();
+};
 
 //virtual istream& operator>>(istream&, DtInteresado);
 //virtual ostream& operator<<(ostream&, DtInteresado);

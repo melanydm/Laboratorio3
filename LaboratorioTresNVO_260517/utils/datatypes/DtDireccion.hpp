@@ -14,8 +14,10 @@ class DtDireccion {
     public:
         DtDireccion();
 
+	string getDepartamento();
         string getCalle();
         string getNumero();
+	void setDepartamento(string);
         void setCalle(string);
         void setNumero(string);
 

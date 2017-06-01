@@ -7,7 +7,7 @@
     }
 
 
-		string DtUsuario :: getEmail(){
+	string DtUsuario :: getEmail(){
       return this->email;
     }
     string DtUsuario :: getContrasenia(){
@@ -20,15 +20,19 @@
       this->contrasenia = contrasenia;
     }
 
-		 bool operator == (DtUsuario oUsuario){
-       if(oUsuario.getEmail() == this->email)
+bool operator== (DtUsuario oUsuario){
+       if(oUsuario.getEmail() == this->email){
           return true;
-      return false;
+	}else{
+      	return false;
+	}
      }
-     }
+     
 
-virtual ~DtUsuario();
 
+		virtual ~DtUsuario();
+
+    
 istream& operator>>(istream& in, DtUsuario& usuario){
 //sobraecarga del operador >>
 int i=0;

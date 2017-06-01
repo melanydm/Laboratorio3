@@ -20,7 +20,7 @@ class Administrador : public Usuario {
 
 		// Destructor
 
-		virtual ~Administrador();
+   virtual ~Administrador();
 };
 
 #endif //ADMINISTRADOR_HPP

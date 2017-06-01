@@ -29,6 +29,7 @@ void DtInmobiliaria :: setDireccion(DtDireccion dir){
 
 virtual ~DtInmobiliaria();
 
+
 istream& operator>>(istream& in, DtInmobiliaria& inmo){
 //sobraecarga del operador >>
 int i=0;

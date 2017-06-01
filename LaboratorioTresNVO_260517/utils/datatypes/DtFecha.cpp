@@ -27,16 +27,19 @@ void DtFecha :: setAa(string aa){
   this->aa = aa;
 }
 
-virtual DtFecha:: ~DtFecha();
+virtual DtFecha:: ~DtFecha(){}
 
 // Operators
 
-bool DtFecha:: operator == (DtFecha fecha){
-  return true;
+bool DtFecha:: operator == (DtFecha f){
+  if (this->getDd() == f.getDd() &&	this->getMm() == f.getMm() &&	this->getAa() == f.getAa()){
+		  return true;
+	}
+return false;
 }
 
 istream& operator>>(istream& in, DtFecha f) {
-		int aux;
+		string aux;
 		in>> setw(2) >> aux;
 		f.setDd(aux);
 		in.ignore(1);
@@ -54,3 +57,7 @@ ostream& operator<<(ostream& out, DtFecha f) {
 		<< f.getAa() << "\r\n";
 	return out;
 }
+
+
+
+

@@ -28,6 +28,6 @@ class DtFecha {
 
 		bool operator == (DtFecha);
 
-}
+};
 
 #endif //DT_FECHA_HPP

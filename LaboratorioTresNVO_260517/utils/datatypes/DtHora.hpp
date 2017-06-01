@@ -21,6 +21,6 @@ class DtHora {
 
         bool operator == (DtHora);
 
-}
+};
 
 #endif //DT_HORA_HPP
