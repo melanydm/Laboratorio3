@@ -1,6 +1,8 @@
 #ifndef DT_OFERTA_HPP
 #define DT_OFERTA_HPP
 
+#include "../../utils/Transa.hpp"
+
 using namespace std;
 
 class DtOferta {
@@ -23,7 +25,7 @@ class DtOferta {
 		// Destructor
 
 		virtual ~DtOferta();
-}
+};
 
 //istream& operator>>(istream&, DtOferta);
 //ostream& operator<<(ostream&, DtOferta);

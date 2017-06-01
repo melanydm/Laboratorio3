@@ -1,6 +1,6 @@
 #ifndef OFERTA_HPP
 #define OFERTA_HPP
-#include "transa.hpp"
+//#include "Transa.hpp"
 #include "./datatypes/DtOferta.hpp"
 
 using namespace std;
@@ -8,25 +8,24 @@ using namespace std;
 class Oferta {
 
     public:
-        Oferta();
-		Oferta(DtOferta);
-        float getPrecio() { return id; }
-        void setPrecio(float prec) { precio = prec ; }
+      Oferta();
+		  Oferta(DtOferta);
+      float getPrecio() { return precio; }
+      void setPrecio(float prec) { precio = prec ; }
         
         // toValueObject
 
-        DtOferta toDataType();
-
-        bool operator == (Oferta*);
+//      bool operator == (Oferta*);
 
       // toDataType
-     DtZona toDataType();
+      DtOferta toDataType();
 
-		// Destructor
+		  // Destructor
 
-		virtual ~Oferta();
+		  virtual ~Oferta();
 
-         protected:
+    protected:
+
     private:
         float precio;
         Transa tipo;

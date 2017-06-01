@@ -6,25 +6,25 @@
 
 DtEdificio::DtEdificio()
 {
-    this->nombre="";
-    this->cant_Pisos="";
-    this->gastos_Comunes="";
+    this->nombre = "";
+    this->cant_Pisos = 0;
+    this->gastos_Comunes = 0;
 }
 DtEdificio::DtEdificio(DtEdificio &val)
 {
-    this->nombre=val.getNombre();
-    this->cant_Pisos=val.getCant_Pisos();
-    this->gastos_Comunes=val.getGastos_Comunes();
+    this->nombre = val.getNombre();
+    this->cant_Pisos = val.getCant_Pisos();
+    this->gastos_Comunes = val.getGastos_Comunes();
 }
 // Setters
 string DtEdificio::getNombre() { return this->nombre; }
-string DtEdificio::getCant_Pisos() { return cant_Pisos; }
-string DtEdificio::getGastos_Comunes() { return gastos_Comunes; }
+int DtEdificio::getCant_Pisos() { return cant_Pisos; }
+float DtEdificio::getGastos_Comunes() { return gastos_Comunes; }
 
 // Getters
 void DtEdificio::setNombre(string nombre) { this->nombre = nombre; }
-void DtEdificio::setCant_Pisos(string cant_pisos) { this->cant_Pisos = cant_pisos; }
-void DtEdificio::setGastos_Comunes(string gastos_comunes) { this->gastos_Comunes = gastos_comunes; }
+void DtEdificio::setCant_Pisos(int cant_pisos) { this->cant_Pisos = cant_pisos; }
+void DtEdificio::setGastos_Comunes(float gastos_comunes) { this->gastos_Comunes = gastos_comunes; }
 
 // Sobrecarga cin
 

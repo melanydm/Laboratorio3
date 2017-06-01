@@ -1,6 +1,8 @@
 #ifndef Departamento_HPP
 #define Departamento_HPP
 
+#include "string"
+#include "./datatypes/DtDepartamento.hpp"
 
 class Departamento
 {
