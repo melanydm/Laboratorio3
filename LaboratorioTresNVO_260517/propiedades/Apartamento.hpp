@@ -1,10 +1,11 @@
 #ifndef APARTAMENTO_HPP
 #define APARTAMENTO_HPP
 
-#include <Propiedad.hpp>
+using namespace std;
+#include "Propiedad.hpp"
+#include "./datatypes/DtApartamento.hpp"
 
-
-class Apartamento : public Propiedad
+class Apartamento:public Propiedad
 {
     public:
         Apartamento();

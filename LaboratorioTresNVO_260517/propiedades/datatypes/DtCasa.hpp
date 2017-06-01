@@ -12,10 +12,10 @@ class DtCasa : public DtPropiedad  {
     public:
         DtCasa();
         DtCasa(DtCasa&);
-    //getters
-    int getMts_espaciosVerdes();
-    //setters
-    void getMts_espaciosVerdes(int);
+        //getters
+        int getMts_espaciosVerdes();
+        //setters
+        void setMts_espaciosVerdes(int);
 
 		// Operators
 

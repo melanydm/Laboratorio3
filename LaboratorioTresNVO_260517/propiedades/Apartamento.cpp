@@ -1,5 +1,6 @@
-#include "Propiedad.hpp"
+
 #include "Apartamento.hpp"
+//#include "Propiedad.hpp"
 
 Apartamento::Apartamento():Propiedad()
 {

@@ -1,7 +1,8 @@
 #ifndef Casa_HPP
 #define Casa_HPP
 
-#include <Propiedad.hpp>
+#include "Propiedad.hpp"
+#include "./datatypes/DtCasa.hpp"
 
 
 class Casa : public Propiedad
@@ -12,7 +13,9 @@ class Casa : public Propiedad
         virtual ~Casa();
         int getMts_espaciosVerdes() { return mts_espaciosVerdes; }
         void setMts_espaciosVerdes(int val) { mts_espaciosVerdes = val; }
+    
     protected:
+
     private:
         int mts_espaciosVerdes;
 };

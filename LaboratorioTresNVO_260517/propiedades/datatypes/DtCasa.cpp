@@ -2,35 +2,36 @@
 #include"DtPropiedad.hpp"
 
 //ctor
-DtCasa():DtPropiedad()
+DtCasa::DtCasa() : DtPropiedad()
 {
-    mts_espaciosVerdes=1;
+    mts_espaciosVerdes = 1;
 }
-DtCasa(DtCasa casa):DtPropiedad(casa)
+
+DtCasa::DtCasa (DtCasa &casa) : DtPropiedad(casa)
 {
-    this.mts_espaciosVerdes=casa.getMts_espaciosVerdes;
+    this.mts_espaciosVerdes = casa.getMts_espaciosVerdes;
 }
    //getters
-int getMts_espaciosVerdes()
+int DtCasa::getMts_espaciosVerdes()
 {
-    return mts_espaciosVerdes;
+    return this.mts_espaciosVerdes;
 }
     //setters
-void getMts_espaciosVerdes(int aux)
+void DtCasa::setMts_espaciosVerdes(int aux)
 {
-    mts_espaciosVerdes=aux;
+    this.mts_espaciosVerdes = aux;
 }
 istream& operator>>(istream& in, DtCasa& oDtCasa){
 //sobraecarga del operador >> 
         string codigo = "";
-        string cant_ambientes ="";
-        string cant_dormitorios= "";
-        string cant_banios= "";
+        int cant_ambientes = 0;
+        int cant_dormitorios= 0;
+        int cant_banios= 0;
         bool garage;
         DtDireccion direccion;
-        string mts_edificados = "";
-        string mts_totales = "";
-        string mts_espaciosVerdes = "";
+        int mts_edificados = 0;
+        int mts_totales = 0;
+        int mts_espaciosVerdes = 0;
         string s=" ";
     while (s!="\n" && i<9){    
         in >> setw(1) >> s;
@@ -39,19 +40,19 @@ istream& operator>>(istream& in, DtCasa& oDtCasa){
         if(i==0)
             codigo=codigo+s;
         else if(i==1){
-            cant_ambientes= cant_ambientes+s;
+            cant_ambientes = cant_ambientes + s;
             i++;
         }
         else if(i==2){
-            cant_dormitorios=cant_dormitorios+s;
+            cant_dormitorios = cant_dormitorios * 10 + (int)s;
             i++;
         }
         else if(i==3){
-            cant_banios=cant_banios+s;
+            cant_banios = cant_banios * 10 + (int)s;
             i++;
         }
         else if(i==4){
-            garage=garage+s;
+            garage = garage && (bool)s;
             i++;
         }
         else if(i==5){
@@ -59,15 +60,15 @@ istream& operator>>(istream& in, DtCasa& oDtCasa){
             i++;
         }
         else if(i==6){
-            mts_edificados=mts_edificados+s;
+            mts_edificados = mts_edificados * 10 + (int)s;
             i++;
         }
         else if(i==7){
-            mts_totales=mts_totales+s;
+            mts_totales = mts_totales * 10+ (int)s;
             i++;
         }
         else if(i==8){
-            mts_espaciosVerdes=mts_espaciosVerdes+s;
+            mts_espaciosVerdes = mts_espaciosVerdes * 10 + (int)s;
             i++;
         }
     }
@@ -97,10 +98,13 @@ ostream& operator<<(ostream& out, DtCasa& oDtCasa)
         <<"\n";
     return out;
 }
+
+// Lo siguiente no sé porqué estaba repetido
+/*
 istream& operator>>(istream& in, DtCasa& oDtCasa){
 //sobraecarga del operador >> 
         string codigo = "";
-        string cant_ambientes ="";
+        string cant_ambientes = 0;
         string cant_dormitorios= "";
         string cant_banios= "";
         string garage;
@@ -174,3 +178,4 @@ ostream& operator<<(ostream& out, DtCasa& oDtCasa)
         <<"\n";
     return out;
 }
+*/

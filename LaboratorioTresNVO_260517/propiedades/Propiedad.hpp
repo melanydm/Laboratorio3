@@ -1,6 +1,8 @@
 #ifndef Propiedad_H
 #define Propiedad_HPP
 
+using namespace std;
+
 #include "./datatypes/DtPropiedad.hpp"
 
 
