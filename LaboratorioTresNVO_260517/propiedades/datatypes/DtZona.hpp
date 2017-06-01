@@ -1,13 +1,15 @@
 #ifndef DT_ZONA_HPP
 #define DT_ZONA_HPP
 
+#include "string"
+
 using namespace std;
 
 class DtZona  {
 
     public:
         DtZona();
-	DtZona(DtZona&);
+		DtZona(DtZona&);
 
 		// Operators
 

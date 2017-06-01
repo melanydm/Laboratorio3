@@ -1,6 +1,7 @@
 #ifndef Zona_HPP
 #define Zona_HPP
 
+#include "./datatypes/DtZona.hpp"
 
 class Zona
 {

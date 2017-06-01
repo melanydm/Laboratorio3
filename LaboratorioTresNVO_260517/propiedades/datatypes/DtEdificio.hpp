@@ -7,8 +7,8 @@ using namespace std;
 class DtEdificio {
     private:
         string nombre;
-        string cant_Pisos;
-        string gastos_Comunes;
+        int cant_Pisos;
+        float gastos_Comunes;
 
     public:
         DtEdificio();
@@ -19,13 +19,13 @@ class DtEdificio {
 
 		// Getters
 		string getNombre();
-		string getCant_Pisos();
-		string getGastos_Comunes();
+		int getCant_Pisos();
+		float getGastos_Comunes();
 
 		// Setters
 		void setNombre(string);
-		void setCant_Pisos(string);
-		void setGastos_Comunes(string);
+		void setCant_Pisos(int);
+		void setGastos_Comunes(float);
 
 		// Destructor
 

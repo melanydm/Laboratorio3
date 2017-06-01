@@ -1,6 +1,7 @@
 #ifndef EDIFICIO_HPP
 #define EDIFICIO_HPP
 
+#include "./datatypes/DtEdificio.hpp"
 
 class Edificio
 {

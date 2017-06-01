@@ -1,5 +1,6 @@
 #include "Departamento.hpp"
-#include "DtDepartamento.hpp"
+
+
 
 Departamento::Departamento()
 {
@@ -9,8 +10,8 @@ Departamento::Departamento()
 
 Departamento::Departamento(DtDepartamento depto)
 {
-    this.id=depto.getId();
-    this.nombre=depto.getNombre();
+    this->id = depto.getId();
+    this->nombre = depto.getNombre();
 }
 
 string Departamento::getId() { return id; }
