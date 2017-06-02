@@ -26,8 +26,7 @@ class DtCasa : public DtPropiedad  {
 
 		virtual ~DtCasa();
 };
-
-//virtual istream& operator>>(istream&, DtCasa);
-//virtual ostream& operator<<(ostream&, DtCasa);
+ istream& operator>>(istream&, DtCasa);
+ ostream& operator<<(ostream&, DtCasa);
 
 #endif //DT_CASA_HPP

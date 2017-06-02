@@ -30,7 +30,7 @@ void DtInmobiliaria :: setDireccion(DtDireccion dir){
 virtual ~DtInmobiliaria();
 
 
-istream& operator>>(istream& in, DtInmobiliaria& inmo){
+istream& operator>>(istream& in, DtInmobiliaria inmo){
 //sobraecarga del operador >>
 int i=0;
 string nombre = "";
@@ -46,8 +46,8 @@ while (s!="\n"&&i<3)
         i++;
     }
  }
-setNombre(nombre);
-setDireccion(direccion);
+inmo.setNombre(nombre);
+inmo.setDireccion(direccion);
 return in;
 }
 

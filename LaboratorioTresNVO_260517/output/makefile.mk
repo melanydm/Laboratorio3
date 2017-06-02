@@ -1,6 +1,6 @@
 
 output: output/main.o output/Fabrica.o output/ISistema.o output/Sistema.o output/Transa.o output/DtDireccion.o output/DtFecha.o output/DtHora.o output/Administrador.o output/Inmobiliaria.o output/Interesado.o output/usuarios/Usuario.o output/DtAdministrador.o output/DtInmobiliaria.o output/DtInteresado.o output/DtUsuario.o output/Apartamento.o output/Casa.o output/Departamento.o output/Edificio.o output/Oferta.o output/Propiedad.o output/Zona.o output/Apartamento.o output/Casa.o output/Departamento.o output/Edificio.o output/Oferta.o output/Propiedad.o output/Zona.o
-	g++ output/main.o output/Fabrica.o output/ISistema.o output/Sistema.o output/Transa.o output/DtDireccion.o output/DtFecha.o output/DtHora.o output/Administrador.o output/Inmobiliaria.o output/Interesado.o output/usuarios/Usuario.o output/DtAdministrador.o output/DtInmobiliaria.o output/DtInteresado.o output/DtUsuario.o output/Apartamento.o output/Casa.o output/Departamento.o output/Edificio.o output/Oferta.o output/Propiedad.o output/Zona.o output/Apartamento.o output/Casa.o output/Departamento.o output/Edificio.o output/Oferta.o output/Propiedad.o output/Zona.o -o Laboratorio
+	g++ output/main.o output/Fabrica.o output/ISistema.o output/Sistema.o output/Transa.o output/DtDireccion.o output/DtFecha.o output/DtHora.o output/Administrador.o output/Inmobiliaria.o output/Interesado.o output/usuarios/Usuario.o output/DtAdministrador.o output/DtInmobiliaria.o output/DtInteresado.o output/DtUsuario.o output/Apartamento.o output/Casa.o output/Departamento.o output/Edificio.o output/Oferta.o output/Propiedad.o output/Zona.o output/Apartamento.o output/Casa.o output/Departamento.o output/Edificio.o output/Oferta.o output/Propiedad.o output/ToBasicDt.o output/Zona.o -o Laboratorio
 
 output/main.o: main.cpp
 	g++ -c main.cpp
@@ -88,6 +88,9 @@ output/Oferta.o: propiedades/datatypes/Oferta.cpp propiedades/datatypes/Oferta.h
 
 output/Propiedad.o: propiedades/datatypes/Propiedad.cpp propiedades/datatypes/Propiedad.hpp
 	g++ -c propiedades/datatypes/Propiedad.cpp
+
+output/Oferta.o: utils/ToBasicDT.cpp utils/ToBasicDT.hpp
+	g++ -c utils/ToBasicDT.cpp
 
 output/Zona.o: propiedades/datatypes/Zona.cpp propiedades/datatypes/Zona.hpp
 	g++ -c propiedades/datatypes/Zona.cpp

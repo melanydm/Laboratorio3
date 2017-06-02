@@ -12,6 +12,7 @@
 #include "./propiedades/datatypes/DtPropiedad.hpp"
 
 #include "./propiedades/datatypes/DtOferta.hpp"
+using namespace std;
 
 class ISistema {
   public:
@@ -33,7 +34,7 @@ class ISistema {
       virtual void selectEdificio(DtEdificio) = 0;
       virtual void altaPropiedad(DtPropiedad, DtOferta) = 0;
 
-      virtual finalizar() = 0;
+      virtual void finalizar() = 0;
 
       //Funciones para precargar datos
       virtual void precargarDatos();

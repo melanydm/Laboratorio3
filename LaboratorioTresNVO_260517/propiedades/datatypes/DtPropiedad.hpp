@@ -19,8 +19,7 @@ class DtPropiedad  {
         DtDireccion direccion;
         int mts_edificados;
         int mts_totales;
-        int toInt(string);
-        string printDireccion(DtDireccion&);
+    
 
 
     public:

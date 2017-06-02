@@ -29,7 +29,7 @@ class DtInteresado : public DtUsuario {
 virtual ~DtInteresado();
 };
 
-//virtual istream& operator>>(istream&, DtInteresado);
-//virtual ostream& operator<<(ostream&, DtInteresado);
+ istream& operator>>(istream&, DtInteresado);
+ ostream& operator<<(ostream&, DtInteresado);
 
 #endif //DT_INTERESADO_HPP

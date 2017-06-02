@@ -33,9 +33,12 @@ class DtEdificio {
 		// Destructor
 
 		virtual ~DtEdificio();
+
+
+	
 };
 
 istream& operator>>(istream&, DtEdificio);
 ostream& operator<<(ostream&, DtEdificio);
-
+//bool DtEdificio:: operator = (DtEdificio);
 #endif //DT_EDIFICIO_HPP

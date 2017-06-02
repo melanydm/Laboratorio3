@@ -14,8 +14,8 @@ class DtInmobiliaria : public DtUsuario {
         DtDireccion direccion;
 
     public:
-        DtInmobiliaria();
-	DtInmobiliaria(DtInmobiliaria&)
+    DtInmobiliaria();
+	DtInmobiliaria(DtInmobiliaria&);
 
         // geters seters
 	string getNombre();
@@ -25,8 +25,13 @@ class DtInmobiliaria : public DtUsuario {
 
 
 		virtual ~DtInmobiliaria();
+
+      
+
+
 };
-//virtual istream& operator>>(istream&, DtInmobiliaria);
-//virtual ostream& operator<<(ostream&, DtInmobiliaria);
+
+ istream& operator>>(istream&, DtInmobiliaria);
+ ostream& operator<<(ostream&, DtInmobiliaria);
 
 #endif //DT_INMOBILIARIA_HPP

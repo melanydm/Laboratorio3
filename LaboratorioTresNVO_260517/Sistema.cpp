@@ -1,5 +1,6 @@
 
 #include "Sistema.hpp"
+using namespace std;
 
 Sistema :: Sistema (){
   this->usuario = NULL;

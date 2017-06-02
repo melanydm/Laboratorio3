@@ -29,5 +29,6 @@ class DtUsuario {
 
 		virtual ~DtUsuario();
 };
-
+ istream& operator>>(istream& in, DtUsuario);
+ ostream& operator<<(ostream& out, DtUsuario);
 #endif //DT_USUARIO_HPP

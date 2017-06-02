@@ -1,12 +1,10 @@
+#include "ToBasicDt.hpp"
+#include <string>
+
 #include "string"
 #include "sstream"
 
-using namespace std;
 
-int toInt(string);
-float toFloat(string);
-
-/*
 int toInt(string s) {
     int aux = 0;
     stringstream ss(s);
@@ -19,4 +17,4 @@ float toFloat(string s) {
 	stringstream ss(s);
 	ss >> aux;
 	return aux;
-}*/
+}

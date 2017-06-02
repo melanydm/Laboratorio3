@@ -6,9 +6,10 @@
 // Description : Laboratorio Tres
 //============================================================================
 
-#include "ISistema.hpp";
-#include "Fabrica.hpp";
-#include <list>;
+#include "ISistema.hpp"
+#include "Fabrica.hpp"
+#include <list>
+#include <iostream>
 
 #include "./usuarios/datatypes/DtInmobiliaria.hpp"
 #include "./propiedades/datatypes/DtApartamento.hpp"
@@ -52,17 +53,20 @@ int main(void) {
             case '2': {
                 cout << "-- Inmobiliaria - Alta Propiedad --" << '\n';
                 list<DtDepartamento> colDeptos = sistema->listarDepto();
-								DtDepartamento oDtDepartamento = mostrarDepartamentos(colDeptos);
+								DtDepartamento oDtDepartamento;
+								mostrarDepartamentos(colDeptos);
 								sistema->selectDepto(oDtDepartamento);
 								list<DtZona> colZonas = sistema->listarZona();
-								DtZona oDtZona = mostrarZona(colZonas);
+								DtZona oDtZona; 
+								mostrarZona(colZonas);
 								sistema->selectZona(oDtZona);
 								if(isApartamento()){
 									bool existeEdificio = false;
 									while(!existeEdificio){
 										list<DtEdificio> colEdificios = sistema->listarEdificios();
-										DtEdificio oDtEdificio = mostrarEdificios(colEdificios);
-										if (oDtEdificio == NULL){
+										DtEdificio oDtEdificio;
+										mostrarEdificios(colEdificios);
+										if (oDtEdificio.getNombre() == ""){
 											std::cout << " -- Alta de Edicio -- " << '\n';
 											std::cin >> oDtEdificio;
 											sistema->altaEdificio(oDtEdificio);
@@ -72,18 +76,18 @@ int main(void) {
 										}
 									}
 									DtApartamento oDtApartamento;
-									std::cin >> DtApartamento;
+									std::cin >> oDtApartamento;
 									DtOferta oDtOferta;
 									std::cin >> oDtOferta;
-									sistema->altaPropiedad(DtApartamento , oDtOferta);
+									sistema->altaPropiedad(oDtApartamento,oDtOferta);
 
 								} else {
 
 									DtCasa oDtCasa;
-									std::cin >> DtCasa;
+									std::cin >> oDtCasa;
 									DtOferta oDtOferta;
 									std::cin >> oDtOferta;
-									sistema->altaPropiedad(DtCasa , oDtOferta);
+									sistema->altaPropiedad(oDtCasa , oDtOferta);
 
 								}
 								sistema->finalizar();
@@ -98,26 +102,26 @@ int main(void) {
 }
 
 void imprimirMenu(){
-	std::cout << "MENU" << '\n \n';
+	std::cout << "MENU" << '\n' ;
 	std::cout << "1 - Alta Inmobiliaria" << '\n';
-	std::cout << "2 - Alta Propiedad" << '\n \n';
+	std::cout << "2 - Alta Propiedad" << '\n' ;
 	std::cout << "Ingrese una opcion: ";
 }
 
 bool isApartamento(){
-	char menu='0';
+	char op='0';
 	bool retorno = false;
 	std::cout << "1 - Apartamento" << '\n';
-	std::cout << "2 - Casa" << '\n \n';
+	std::cout << "2 - Casa " << '\n' ;
 	std::cout << "Ingrese una opcion: ";
 	cin >> op;
 	switch (op) {
 			case '1': {
-				retrono = true;
+				retorno = true;
 				break;
 			}
 			case '2': {
-				retrono = false;
+				retorno = false;
 				break;
 			}
 			default: cout << "Error, valor incorrecto";
@@ -126,7 +130,7 @@ bool isApartamento(){
 }
 
 DtDepartamento mostrarDepartamentos(list<DtDepartamento> colDeptos){
-	DtDepartamento oDtDepartamento = null;
+	DtDepartamento oDtDepartamento;
 
 	cout << "-- Seleccionar Departamento --" << endl;
 
@@ -152,7 +156,7 @@ DtDepartamento mostrarDepartamentos(list<DtDepartamento> colDeptos){
 }
 
 DtZona mostrarZona(list<DtZona> colZonas){
-	DtZona oDtZona = null;
+	DtZona oDtZona;
 
 	cout << "-- Seleccionar Zonas --" << endl;
 
@@ -178,7 +182,7 @@ DtZona mostrarZona(list<DtZona> colZonas){
 }
 
 DtEdificio mostrarEdificios(list<DtEdificio> colEdificios){
-	DtEdificio oDtEdificio = null;
+	DtEdificio oDtEdificio;
 
 	cout << "-- Seleccionar Edificios --" << endl;
 
@@ -202,3 +206,4 @@ DtEdificio mostrarEdificios(list<DtEdificio> colEdificios){
 	}
 	return oDtEdificio;
 }
+

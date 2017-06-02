@@ -21,6 +21,7 @@
 #include "./propiedades/datatypes/DtOferta.hpp"
 
 #include "ISistema.hpp"
+using namespace std;
 
 class Sistema: public ISistema {
     private:

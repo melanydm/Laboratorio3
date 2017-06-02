@@ -16,7 +16,7 @@ class DtAdministrador : public DtUsuario {
 		virtual ~DtAdministrador();
 };
 
-//virtual istream& operator>>(istream&, DtAdministrador);
-//virtual ostream& operator<<(ostream&, DtAdministrador);
+istream& operator>>(istream&, DtAdministrador);
+ostream& operator<<(ostream&, DtAdministrador);
 
 #endif //DT_ADMINISTRADOR_HPP
