@@ -4,7 +4,7 @@
 #include "Propiedad.hpp"
 #include "./datatypes/DtCasa.hpp"
 
-
+using namespace std;
 class Casa : public Propiedad
 {
     public:

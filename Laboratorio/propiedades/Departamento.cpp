@@ -8,7 +8,7 @@ Departamento::Departamento()
     nombre="";
 }
 
-Departamento::Departamento(DtDepartamento depto)
+Departamento::Departamento(const DtDepartamento depto)
 {
     this->id = depto.getId();
     this->nombre = depto.getNombre();
@@ -23,10 +23,10 @@ DtDepartamento Departamento::toDataType()
     return depto;
 }
 
-string Departamento::getId() { return id; }
-void Departamento:: setId(string val) { id = val; }
-string Departamento::getNombre() { return nombre; }
-void Departamento::setNombre(string val) { nombre = val; }
+string Departamento :: getId() { return id; }
+void Departamento :: setId(string val) { id = val; }
+string Departamento :: getNombre() { return nombre; }
+void Departamento :: setNombre(string val) { nombre = val; }
 
 Departamento::~Departamento()
 {

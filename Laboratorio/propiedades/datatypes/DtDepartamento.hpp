@@ -16,7 +16,7 @@ class DtDepartamento {
         string nombre;
     public:
         DtDepartamento();
-        DtDepartamento(const DtDepartamento&);
+        DtDepartamento(DtDepartamento&);
 
         void setId(string id) { this->id = id; }
         string getId(){ return this->id; }

@@ -2,7 +2,7 @@
 #define EDIFICIO_HPP
 
 #include "./datatypes/DtEdificio.hpp"
-
+using namespace std;
 class Edificio
 {
     public:

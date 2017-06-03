@@ -3,12 +3,12 @@
 
 #include "string"
 #include "./datatypes/DtDepartamento.hpp"
-
+using namespace std;
 class Departamento
 {
     public:
         Departamento();
-        Departamento(DtDepartamento);
+        Departamento(const DtDepartamento);
         virtual ~Departamento();
         string getId();
         void setId(string);
