@@ -6,6 +6,3 @@
 
   }
 
-virtual ~DtAdministrador(){
-
-    }

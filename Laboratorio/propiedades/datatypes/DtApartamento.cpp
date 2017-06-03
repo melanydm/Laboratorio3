@@ -1,7 +1,8 @@
 #include"DtPropiedad.hpp"
 #include"DtApartamento.hpp" //unsigned int m_Counter
-DtApartamento::DtApartamento():DtPropiedad(){
-}
+DtApartamento::DtApartamento() : DtPropiedad() {}
+DtApartamento::DtApartamento(DtApartamento& apto) : DtPropiedad(apto) {}
+DtApartamento::DtApartamento(DtPropiedad& prop) : DtPropiedad(prop) {}
 
 istream& operator>>(istream& in, DtApartamento& oDtApartamento){
 //sobraecarga del operador >> 

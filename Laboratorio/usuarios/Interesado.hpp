@@ -21,19 +21,19 @@ class Interesado : public Usuario {
 
         // geters seters
 	string getNombre();
-        string getApellido();
-        string getEdad();
-        void setNombre(string);
-        void setApellido(string);
-        void setEdad(string);
+    string getApellido();
+    string getEdad();
+    void setNombre(string);
+    void setApellido(string);
+    void setEdad(string);
 
         // toDataType
 
-     DtUsuario toDataType();
+    DtUsuario toDataType();
 
 		// Destructor
 
 		virtual ~Interesado();
-}
+};
 
 #endif //INTERESADO_HPP

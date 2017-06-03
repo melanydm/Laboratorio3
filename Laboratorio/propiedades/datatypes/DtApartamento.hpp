@@ -12,6 +12,8 @@ class DtApartamento : public DtPropiedad  {
 
     public:
         DtApartamento();
+        DtApartamento(DtApartamento&);
+        DtApartamento(DtPropiedad&);
 
 		    // Operators
 

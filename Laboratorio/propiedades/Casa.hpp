@@ -10,6 +10,7 @@ class Casa : public Propiedad
     public:
         Casa();
         Casa(DtCasa);
+        Casa(DtPropiedad);
         virtual ~Casa();
         int getMts_espaciosVerdes() { return mts_espaciosVerdes; }
         void setMts_espaciosVerdes(int val) { mts_espaciosVerdes = val; }

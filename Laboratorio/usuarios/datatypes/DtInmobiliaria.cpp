@@ -5,10 +5,10 @@
 
 DtInmobiliaria :: DtInmobiliaria(): DtUsuario(){
   this->nombre = "";
-  this->direccion = "";
+  this->direccion;
 }
 
-DtInmobiliaria :: DtInmobiliaria(DtInmobiliaria inmo): DtUsuario(inmo){
+DtInmobiliaria :: DtInmobiliaria(DtInmobiliaria& inmo): DtUsuario(inmo){
   this->nombre =inmo.getNombre();
   this->direccion = inmo.getDireccion();
 }
@@ -27,19 +27,17 @@ void DtInmobiliaria :: setDireccion(DtDireccion dir){
 }
 
 
-virtual ~DtInmobiliaria();
-
-
 istream& operator>>(istream& in, DtInmobiliaria inmo){
 //sobraecarga del operador >>
 int i=0;
 string nombre = "";
+string s = "";
 DtDireccion direccion;
 while (s!="\n"&&i<3)
 {   in >> setw(1) >> s;
     if (s==",")
         i++;
-    if(i==0){
+    if(i==0)
         nombre=nombre+s;
     else if(i==1){
         in>>direccion;
@@ -54,7 +52,7 @@ return in;
 ostream& operator<<(ostream& out, DtInmobiliaria& inmo){
 //sobraecarga del operador >>
 out <<"\nNombre: "<< inmo.getNombre()
-<<"\nDireccion: "<< inmo.getDireccion()
+<<"\nDireccion: "<< printDireccion(inmo.getDireccion())
 <<"\n";
 return out;
 }

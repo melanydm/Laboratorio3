@@ -16,23 +16,23 @@ Usuario::Usuario(DtUsuario oDtUsuario){
   this->contrasenia = oDtUsuario.getContrasenia();
 }
 
- string Usuario::getEmail(){
-  return this->mail;
+string Usuario::getEmail(){
+  return this->email;
 }
      string Usuario::getContrasenia(){
       return this->contrasenia;
     }
- void Usuario::setEmail(string mail){
-      this->mail = mail;
+ void Usuario::setEmail(string email){
+      this->email = email;
 }
  void Usuario::setContrasenia(string contrasenia){
       this->contrasenia = contrasenia;
 }
 
-bool operator == (Usuario* oUsuario){
+bool Usuario::operator == (Usuario* oUsuario){
   if(oUsuario->getEmail() == this->getEmail())
-     return true;
- return false;
+    return true;
+  return false;
 }
 
 Usuario::~Usuario(){

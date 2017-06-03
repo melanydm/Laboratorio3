@@ -1,32 +1,29 @@
 
-output: output/main.o output/Fabrica.o output/ISistema.o output/Sistema.o output/Transa.o output/DtDireccion.o output/DtFecha.o output/DtHora.o output/Administrador.o output/Inmobiliaria.o output/Interesado.o output/usuarios/Usuario.o output/DtAdministrador.o output/DtInmobiliaria.o output/DtInteresado.o output/DtUsuario.o output/Apartamento.o output/Casa.o output/Departamento.o output/Edificio.o output/Oferta.o output/Propiedad.o output/Zona.o output/Apartamento.o output/Casa.o output/Departamento.o output/Edificio.o output/Oferta.o output/Propiedad.o output/ToBasicDt.o output/Zona.o
-	g++ output/main.o output/Fabrica.o output/ISistema.o output/Sistema.o output/Transa.o output/DtDireccion.o output/DtFecha.o output/DtHora.o output/Administrador.o output/Inmobiliaria.o output/Interesado.o output/usuarios/Usuario.o output/DtAdministrador.o output/DtInmobiliaria.o output/DtInteresado.o output/DtUsuario.o output/Apartamento.o output/Casa.o output/Departamento.o output/Edificio.o output/Oferta.o output/Propiedad.o output/Zona.o output/Apartamento.o output/Casa.o output/Departamento.o output/Edificio.o output/Oferta.o output/Propiedad.o output/ToBasicDt.o output/Zona.o -o Laboratorio
+output: output/main.o output/Fabrica.o output/Sistema.o output/Transa.o output/DtDireccion.o output/DtFecha.o output/DtHora.o output/Administrador.o output/Inmobiliaria.o output/Interesado.o output/Usuario.o output/DtAdministrador.o output/DtInmobiliaria.o output/DtInteresado.o output/DtUsuario.o output/Apartamento.o output/Casa.o output/Departamento.o output/Edificio.o output/Oferta.o output/Propiedad.o output/Zona.o output/Apartamento.o output/Casa.o output/Departamento.o output/Edificio.o output/Oferta.o output/Propiedad.o output/ToBasicDt.o output/Zona.o
+	g++ output/main.o output/Fabrica.o output/Sistema.o output/Transa.o output/DtDireccion.o output/DtFecha.o output/DtHora.o output/Administrador.o output/Inmobiliaria.o output/Interesado.o output/Usuario.o output/DtAdministrador.o output/DtInmobiliaria.o output/DtInteresado.o output/DtUsuario.o output/Apartamento.o output/Casa.o output/Departamento.o output/Edificio.o output/Oferta.o output/Propiedad.o output/Zona.o output/Apartamento.o output/Casa.o output/Departamento.o output/Edificio.o output/Oferta.o output/Propiedad.o output/ToBasicDt.o output/Zona.o -o Laboratorio
 
-output/main.o: main.cpp
+output/main.o: main.cpp ISistema.hpp
 	g++ -c main.cpp
 
-output/Fabrica.o: Fabrica.hpp
-	g++ -c Fabrica.cpp
+output/Fabrica.o: Fabrica.hpp ISistema.hpp
+	g++ -c Fabrica.hpp
 
-output/ISistema.o: ISistema.hpp
-	g++ -c ISistema.cpp
-
-output/Sistema.o: Sistema.cpp Sistema.hpp
+output/Sistema.o: Sistema.cpp Sistema.hpp ISistema.hpp
 	g++ -c Sistema.cpp
 
 output/Transa.o: utils/Transa.hpp
-	g++ -c utils/Transa.cpp
+	g++ -c utils/Transa.hpp
 
-output/datatypes/DtDireccion.o: utils/datatypes/DtDireccion.cpp utils/datatypes/DtDireccion.hpp
+output/DtDireccion.o: utils/datatypes/DtDireccion.cpp utils/datatypes/DtDireccion.hpp
 	g++ -c utils/datatypes/DtDireccion.cpp
 
-output/datatypes/DtFecha.o: utils/datatypes/DtFecha.cpp utils/datatypes/DtFecha.hpp
+output/DtFecha.o: utils/datatypes/DtFecha.cpp utils/datatypes/DtFecha.hpp
 	g++ -c utils/datatypes/DtFecha.cpp
 
-output/datatypes/DtHora.o: utils/datatypes/DtHora.cpp utils/datatypes/DtHora.hpp
+output/DtHora.o: utils/datatypes/DtHora.cpp utils/datatypes/DtHora.hpp
 	g++ -c utils/datatypes/DtHora.cpp
 
-output/usuarios/Administrador.o: usuarios/Administrador.cpp usuarios/Administrador.hpp
+output/Administrador.o: usuarios/Administrador.cpp usuarios/Administrador.hpp
 	g++ -c usuarios/Administrador.cpp
 
 output/Inmobiliaria.o: usuarios/Inmobiliaria.cpp usuarios/Inmobiliaria.hpp
@@ -71,29 +68,29 @@ output/Propiedad.o: propiedades/Propiedad.cpp propiedades/Propiedad.hpp
 output/Zona.o: propiedades/Zona.cpp propiedades/Zona.hpp
 	g++ -c propiedades/Zona.cpp
 
-output/Apartamento.o: propiedades/datatypes/Apartamento.cpp propiedades/datatypes/Apartamento.hpp
-	g++ -c propiedades/datatypes/Apartamento.cpp
+output/Apartamento.o: propiedades/datatypes/DtApartamento.cpp propiedades/datatypes/DtApartamento.hpp
+	g++ -c propiedades/datatypes/DtApartamento.cpp
 
-output/Casa.o: propiedades/datatypes/Casa.cpp propiedades/datatypes/Casa.hpp
-	g++ -c propiedades/datatypes/Casa.cpp
+output/Casa.o: propiedades/datatypes/DtCasa.cpp propiedades/datatypes/DtCasa.hpp
+	g++ -c propiedades/datatypes/DtCasa.cpp
 
-output/Departamento.o: propiedades/datatypes/Departamento.cpp propiedades/datatypes/Departamento.hpp
-	g++ -c propiedades/datatypes/Departamento.cpp
+output/Departamento.o: propiedades/datatypes/DtDepartamento.cpp propiedades/datatypes/DtDepartamento.hpp
+	g++ -c propiedades/datatypes/DtDepartamento.cpp
 
-output/Edificio.o: propiedades/datatypes/Edificio.cpp propiedades/datatypes/Edificio.hpp
-	g++ -c propiedades/datatypes/Edificio.cpp
+output/Edificio.o: propiedades/datatypes/DtEdificio.cpp propiedades/datatypes/DtEdificio.hpp
+	g++ -c propiedades/datatypes/DtEdificio.cpp
 
-output/Oferta.o: propiedades/datatypes/Oferta.cpp propiedades/datatypes/Oferta.hpp
-	g++ -c propiedades/datatypes/Oferta.cpp
+output/Oferta.o: propiedades/datatypes/DtOferta.cpp propiedades/datatypes/DtOferta.hpp
+	g++ -c propiedades/datatypes/DtOferta.cpp
 
-output/Propiedad.o: propiedades/datatypes/Propiedad.cpp propiedades/datatypes/Propiedad.hpp
-	g++ -c propiedades/datatypes/Propiedad.cpp
+output/Propiedad.o: propiedades/datatypes/DtPropiedad.cpp propiedades/datatypes/DtPropiedad.hpp
+	g++ -c propiedades/datatypes/DtPropiedad.cpp
 
-output/Oferta.o: utils/ToBasicDT.cpp utils/ToBasicDT.hpp
-	g++ -c utils/ToBasicDT.cpp
+output/ToBasicDt.o: utils/ToBasicDt.cpp utils/ToBasicDt.hpp
+	g++ -c utils/ToBasicDt.cpp
 
-output/Zona.o: propiedades/datatypes/Zona.cpp propiedades/datatypes/Zona.hpp
-	g++ -c propiedades/datatypes/Zona.cpp
+output/Zona.o: propiedades/datatypes/DtZona.cpp propiedades/datatypes/DtZona.hpp
+	g++ -c propiedades/datatypes/DtZona.cpp
 
 
 clean:

@@ -5,6 +5,11 @@ Zona::Zona(){
     this->nombre = "";
 }
 
+Zona::Zona(DtZona dtz){
+	this->codigo = dtz.getCodigo();
+	this->nombre = dtz.getNombre();
+}
+
 Zona::~Zona(){
 }
 

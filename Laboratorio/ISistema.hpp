@@ -32,7 +32,7 @@ class ISistema {
       virtual void selectZona(DtZona)  = 0;
       virtual list<DtEdificio> listarEdificios() = 0;
       virtual void selectEdificio(DtEdificio) = 0;
-      virtual void altaPropiedad(DtPropiedad, DtOferta) = 0;
+      virtual void altaPropiedad(DtPropiedad&, DtOferta) = 0;
 
       virtual void finalizar() = 0;
 

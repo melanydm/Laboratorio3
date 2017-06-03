@@ -7,7 +7,7 @@ DtEdificio::DtEdificio()
     this->cant_Pisos = 0;
     this->gastos_Comunes = 0;
 }
-DtEdificio::DtEdificio(DtEdificio &val)
+DtEdificio::DtEdificio(const DtEdificio &val)
 {
     this->nombre = val.getNombre();
     this->cant_Pisos = val.getCant_Pisos();

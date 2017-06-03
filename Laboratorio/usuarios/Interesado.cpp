@@ -43,11 +43,8 @@ void Interesado :: setEdad(string edad){
    DtInteresado oDtInteresado;
    oDtInteresado.setEmail(this->getEmail());
    oDtInteresado.setContrasenia(this->getContrasenia());
-   oDtInteresado.setNombre(this->nombre);
-   oDtInteresado.setApellido(this->apellido);
-   oDtInteresado.setEdad(this->edad);
+   oDtInteresado.setNombre(this->getNombre());
+   oDtInteresado.setApellido(this->getApellido());
+   oDtInteresado.setEdad(this->getEdad());
    return oDtInteresado;
  }
-		// Destructor
-
-virtual ~Interesado();

@@ -1,3 +1,6 @@
+
+#include <stdio.h>
+
 using namespace std;
 
-enum class Transa { Venta, Alquiler };
+enum Transa { Venta, Alquiler };

@@ -129,22 +129,22 @@ void Sistema :: altaPropiedad(DtPropiedad oDtPropiedad, DtOferta oDtOferta){
   * Otra forma de verificar el tipo puede ser con la librería "type_info":
   * que permite utilizar la funcion typeID que devuelve el nombre de la clase
   */
-  if (dynamic_cast<DtCasa>(oDtPropiedad) == NULL) {
-    Casa * casa = new Casa(dynamic_cast<DtCasa>(oDtPropiedad));
+  if (oDtPropiedad.getCodigo() == "") {
+    Casa * casa = new Casa(oDtPropiedad);
   } else {
-    Apartamento * apto = new Apartamento(dynamic_cast<DtApartamento>(oDtPropiedad));
+    Apartamento * apto = new Apartamento(oDtPropiedad);
   }
   Oferta * ofer = new Oferta(oDtOferta);
 }
 
 
 void Sistema :: finalizar(){
-
+}
 
 
 //*************Procedimiento para precargar datos
 
-void precargarDatos()
+void Sistema::precargarDatos()
 {
     DtDepartamento depto;
     DtZona zone;
@@ -168,15 +168,11 @@ void precargarDatos()
 
     edif.setNombre("Amnesia");
     edif.setCant_Pisos(25);
-    edif.setGastos_Comunes(2500,98);
+    edif.setGastos_Comunes(2500.98);
     altaEdificio(edif);
 
     edif.setNombre("Lunas de malvin");
     edif.setCant_Pisos(15);
-    edif.setGastos_Comunes(1349,65);
+    edif.setGastos_Comunes(1349.65);
     altaEdificio(edif);
-}
-
-
-
 }

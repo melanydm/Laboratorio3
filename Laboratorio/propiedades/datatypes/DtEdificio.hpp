@@ -15,7 +15,7 @@ class DtEdificio {
 
     public:
         DtEdificio();
-        DtEdificio(DtEdificio&);
+        DtEdificio(const DtEdificio&);
 		// Operators
 
 		//virtual bool operator == (DtEdificio) = 0;

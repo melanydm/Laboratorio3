@@ -1,4 +1,4 @@
-#ifndef Propiedad_H
+#ifndef Propiedad_HPP
 #define Propiedad_HPP
 
 using namespace std;

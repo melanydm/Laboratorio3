@@ -1,8 +1,9 @@
 #ifndef DT_INTERESADO_HPP
 #define DT_INTERESADO_HPP
 
-#include <string>
-
+#include "string"
+#include "iomanip"
+#include "iostream"
 #include "DtUsuario.hpp"
 
 
@@ -19,12 +20,12 @@ class DtInteresado : public DtUsuario {
 
 
         // geters seters
-	string getNombre();
+    	string getNombre();
         string getApellido();
         string getEdad();
-        void getNombre(string);
-        void getApellido(string);
-        void getEdad(string);
+        void setNombre(string);
+        void setApellido(string);
+        void setEdad(string);
 
 virtual ~DtInteresado();
 };

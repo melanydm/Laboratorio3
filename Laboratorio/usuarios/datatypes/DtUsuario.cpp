@@ -20,24 +20,21 @@
       this->contrasenia = contrasenia;
     }
 
-bool operator== (DtUsuario oUsuario){
+bool DtUsuario::operator== (DtUsuario oUsuario){
        if(oUsuario.getEmail() == this->email){
           return true;
 	}else{
       	return false;
 	}
-     }
-     
-
-
-		virtual ~DtUsuario();
+}
 
     
-istream& operator>>(istream& in, DtUsuario& usuario){
+istream& operator>>(istream& in, DtUsuario usuario){
 //sobraecarga del operador >>
 int i=0;
 string email = "";
 string contrasenia = "";
+string s = "";
 while (s!="\n"&&i<3){
    in >> setw(1) >> s;
     if (s==",")
@@ -54,7 +51,7 @@ usuario.setContrasenia(contrasenia);
 return in;
 }
 
-ostream& operator<<(ostream& out, DtUsuario& usuario){
+ostream& operator<<(ostream& out, DtUsuario usuario){
 //sobraecarga del operador >>
 out <<"\nEmail: "<< usuario.getEmail()
 <<"\nContraseña: "<< usuario.getContrasenia()

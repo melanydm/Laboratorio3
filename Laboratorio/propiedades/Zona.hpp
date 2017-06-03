@@ -7,6 +7,7 @@ class Zona
 {
     public:
         Zona();
+        Zona(DtZona);
         virtual ~Zona();
         string getCodigo();
         void setCodigo(string);

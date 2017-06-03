@@ -2,6 +2,8 @@
 #define DT_DIRECCION_HPP
 
 #include <string>
+#include "iomanip"
+#include "iostream"
 
 using namespace std;
 
@@ -10,6 +12,7 @@ class DtDireccion {
   private:
     string calle;
     string numero;
+    string departamento;
 
   public:
     DtDireccion();

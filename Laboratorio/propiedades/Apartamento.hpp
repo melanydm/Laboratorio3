@@ -10,6 +10,7 @@ class Apartamento:public Propiedad
     public:
         Apartamento();
         Apartamento(DtApartamento);
+        Apartamento(DtPropiedad);
         virtual ~Apartamento();
     protected:
     private:

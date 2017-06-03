@@ -20,10 +20,8 @@ void DtHora :: setMinutos(int minutos){
   this->minutos = minutos;
 }
 
-virtual DtHora:: ~DtHora();
-
 bool DtHora:: operator == (DtHora hora){
-  if (this->getHora() == f.getHora() && this->getMinutos() == f.getMinutos()){
+  if (this->getHora() == hora.getHora() && this->getMinutos() == hora.getMinutos()){
 		return true;
 	}
 return false;
@@ -41,7 +39,7 @@ istream& operator>>(istream& in, DtHora hora) {
 }
 
 ostream& operator<<(ostream& out, DtHora hora) {
-	out << hora.getHora() << ":";
+	out << hora.getHora() << ":"
 		<< hora.getMinutos();
 	return out;
 }

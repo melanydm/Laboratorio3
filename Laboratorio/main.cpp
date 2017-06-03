@@ -98,7 +98,7 @@ int main(void) {
         cout << "\nEnter para volver al menú.";
         cin.ignore();
     }
-	return EXIT_SUCCESS;
+	//return EXIT_SUCCESS;
 }
 
 void imprimirMenu(){

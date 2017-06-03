@@ -11,7 +11,7 @@ class DtZona  {
 
     public:
         DtZona();
-		DtZona(DtZona&);
+		DtZona(const DtZona&);
 
 		// Operators
 

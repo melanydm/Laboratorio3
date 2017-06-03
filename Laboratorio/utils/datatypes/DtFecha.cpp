@@ -1,6 +1,8 @@
 #include "DtFecha.hpp"
 
-#include <string>
+#include "string"
+#include "iomanip"
+#include "iostream"
 
 DtFecha::DtFecha(){
   this->aa = "";
@@ -27,7 +29,6 @@ void DtFecha :: setAa(string aa){
   this->aa = aa;
 }
 
-virtual DtFecha:: ~DtFecha(){}
 
 // Operators
 

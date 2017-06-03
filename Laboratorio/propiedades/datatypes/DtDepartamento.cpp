@@ -5,17 +5,17 @@
 using namespace std;
 
 DtDepartamento::DtDepartamento(){
-    id = 0;
+    id = "";
     nombre = "";
 }
 
-DtDepartamento::DtDepartamento(DtDepartamento& depto)
+DtDepartamento::DtDepartamento(const DtDepartamento& depto)
 {
     this->id = depto.getId();
     this->nombre = depto.getNombre();
 }
 istream& operator>>(istream& in, DtDepartamento dtd){
-    int id = 0;
+    string id = "";
     string nombre = "";
 
     int i = 0;
@@ -25,7 +25,7 @@ istream& operator>>(istream& in, DtDepartamento dtd){
 		if (s == ",")
 			i++;
 		if (i == 0)
-			id = id * 10 + toInt(s);
+			id = id + s;
 		else if (i == 1)
 			nombre = nombre + s;
 	}

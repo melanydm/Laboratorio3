@@ -1,6 +1,5 @@
 #include "DtDireccion.hpp"
 
-#include <string>
 
 DtDireccion :: DtDireccion(){
   this->departamento = "";
@@ -32,7 +31,7 @@ string printDireccion(DtDireccion dir){
     return strdir;
 }
 
-virtual DtDireccion ::  ~DtDireccion();
+
 
 		// Operators
 bool DtDireccion ::  operator == (DtDireccion dir){

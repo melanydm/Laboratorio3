@@ -6,7 +6,8 @@
 #include <string>
 
 #include "./usuarios/Usuario.hpp"
-#include "./propiedades/Propiedad.hpp"
+#include "./propiedades/Apartamento.hpp"
+#include "./propiedades/Casa.hpp"
 #include "./propiedades/Departamento.hpp"
 #include "./propiedades/Zona.hpp"
 #include "./propiedades/Edificio.hpp"
@@ -17,7 +18,8 @@
 #include "./propiedades/datatypes/DtEdificio.hpp"
 #include "./propiedades/datatypes/DtDepartamento.hpp"
 #include "./propiedades/datatypes/DtZona.hpp"
-#include "./propiedades/datatypes/DtPropiedad.hpp"
+#include "./propiedades/datatypes/DtApartamento.hpp"
+#include "./propiedades/datatypes/DtCasa.hpp"
 #include "./propiedades/datatypes/DtOferta.hpp"
 
 #include "ISistema.hpp"

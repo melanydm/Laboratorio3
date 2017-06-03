@@ -18,6 +18,3 @@ Administrador :: Administrador(string email, string contrasenia):Usuario(email, 
    return oDtAdministrador;
  }
 
-		// Destructor
-
-virtual ~Administrador();

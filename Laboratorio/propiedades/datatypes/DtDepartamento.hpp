@@ -12,14 +12,14 @@ using namespace std;
 
 class DtDepartamento {
     private:
-        int id;
+        string id;
         string nombre;
     public:
         DtDepartamento();
-        DtDepartamento(DtDepartamento&);
+        DtDepartamento(const DtDepartamento&);
 
-        void setId(int id) { this->id = id; }
-        int getId(){ return this->id; }
+        void setId(string id) { this->id = id; }
+        string getId(){ return this->id; }
         void setNombre(string nombre){ this->nombre = nombre; }
         string getNombre(){ return this->nombre; }
 		// Operators

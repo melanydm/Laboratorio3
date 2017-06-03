@@ -14,6 +14,7 @@ class Departamento
         void setId(string);
         string getNombre();
         void setNombre(string);
+        DtDepartamento toDataType();
 
     private:
         string id;

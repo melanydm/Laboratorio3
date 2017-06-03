@@ -7,7 +7,7 @@ DtZona::DtZona()
 	this->codigo = "";
 	this->nombre = "";
 }
-DtZona::DtZona(DtZona& dtz)
+DtZona::DtZona(const DtZona& dtz)
 {
 	this->codigo = dtz.getCodigo();
 	this->nombre = dtz.getNombre();

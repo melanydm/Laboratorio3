@@ -16,21 +16,21 @@ Inmobiliaria :: Inmobiliaria(DtInmobiliaria oDtInmobiliaria):Usuario(oDtInmobili
   }
 
 
-string Inmobiliaria :: string getNombre(){
+string Inmobiliaria::getNombre(){
   return this->nombre;
 }
-DtDireccion Inmobiliaria :: DtDireccion getDireccion(){
+DtDireccion Inmobiliaria::getDireccion(){
   return this->direccion;
 }
-void Inmobiliaria :: void setNombre(string nombre){
+void Inmobiliaria::setNombre(string nombre){
   this->nombre = nombre;
 }
-void Inmobiliaria :: void setDireccion(DtDireccion direccion){
+void Inmobiliaria::setDireccion(DtDireccion direccion){
   this->direccion = direccion;
 }
 
 DtUsuario Inmobiliaria :: toDataType(){
-  DtInteresado oDtInmobiliaria;
+  DtInmobiliaria oDtInmobiliaria;
   oDtInmobiliaria.setEmail(this->getEmail());
   oDtInmobiliaria.setContrasenia(this->getContrasenia());
   oDtInmobiliaria.setNombre(this->nombre);

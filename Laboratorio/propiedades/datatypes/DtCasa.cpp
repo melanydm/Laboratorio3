@@ -11,7 +11,9 @@ DtCasa::DtCasa (DtCasa &casa) : DtPropiedad(casa)
 {
     this->mts_espaciosVerdes = casa.getMts_espaciosVerdes();
 }
+
    //getters
+
 int DtCasa::getMts_espaciosVerdes()
 {
     return this->mts_espaciosVerdes;

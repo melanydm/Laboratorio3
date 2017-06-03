@@ -2,14 +2,10 @@
 
 class Fabrica {
   public:
-    Fabrica(){ }
+    Fabrica();
 
-    virtual  ~Fabrica(){
-      //delete this;
-    }
+    virtual  ~Fabrica();
 
 
-    virtual Sistema* getSistema(){
-      return new Sistema();
-    }
+    Sistema* getSistema();
 };

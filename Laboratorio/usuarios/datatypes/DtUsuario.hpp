@@ -2,6 +2,8 @@
 #define DT_USUARIO_HPP
 
 #include <string>
+#include "iomanip"
+#include "iostream"
 
 using namespace std;
 

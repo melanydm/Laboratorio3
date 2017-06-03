@@ -20,21 +20,16 @@
     string DtInteresado :: getEdad(){
       return this->edad;
     }
-    void DtInteresado :: getNombre(string nombre){
+    void DtInteresado :: setNombre(string nombre){
       this->nombre = nombre;
     }
-    void DtInteresado :: getApellido(string apellido){
+    void DtInteresado :: setApellido(string apellido){
       this->apellido = apellido;
     }
-    void DtInteresado :: getEdad(string edad){
+    void DtInteresado :: setEdad(string edad){
       this->edad = edad;
     }
 
-		// Destructor
-
-		virtual DtInteresado :: ~DtInteresado(){
-
-    }
 
 
 istream& operator>>(istream& in, DtInteresado& interesado){
