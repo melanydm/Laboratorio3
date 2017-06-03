@@ -3,13 +3,13 @@ output: output/main.o output/Fabrica.o output/Sistema.o output/Transa.o output/D
 	g++ output/main.o output/Fabrica.o output/Sistema.o output/Transa.o output/DtDireccion.o output/DtFecha.o output/DtHora.o output/Administrador.o output/Inmobiliaria.o output/Interesado.o output/Usuario.o output/DtAdministrador.o output/DtInmobiliaria.o output/DtInteresado.o output/DtUsuario.o output/Apartamento.o output/Casa.o output/Departamento.o output/Edificio.o output/Oferta.o output/Propiedad.o output/Zona.o output/Apartamento.o output/Casa.o output/Departamento.o output/Edificio.o output/Oferta.o output/Propiedad.o output/ToBasicDt.o output/Zona.o/DtDepartamento.o output -o Laboratorio
 
 output/main.o: main.cpp ISistema.hpp 
-	g++ -c main.cpp ISistema.hpp
+	g++ -c main.cpp
 
 output/Fabrica.o: Fabrica.hpp ISistema.hpp
-	g++ -c Fabrica.hpp ISistema.hpp
+	g++ -c Fabrica.hpp
 
 output/Sistema.o: Sistema.cpp Sistema.hpp ISistema.hpp
-	g++ -c Sistema.cpp ISistema.hpp
+	g++ -c Sistema.cpp
 
 output/Transa.o: utils/Transa.hpp
 	g++ -c utils/Transa.hpp
