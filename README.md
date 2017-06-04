@@ -29,3 +29,4 @@ Comandos básicos del Git:
 
 -
 Carlos: Alta propiedad falta listar Edificios, select edificio y alta propiedad
+Melany: Enviar mensaje (usuario interesado) falta resolver la operación agregarMensaje(string: mensaje)
