@@ -28,3 +28,4 @@ Comandos básicos del Git:
 	git push
 
 -
+Carlos: Alta propiedad falta listar Edificios, select edificio y alta propiedad
