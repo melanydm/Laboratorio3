@@ -46,7 +46,7 @@ class Sistema: public ISistema {
         //Alta Propiedad
       Sistema();
 
-      virtual  ~Sistema();
+      ~Sistema();
 
       Usuario* getUsuario();
 

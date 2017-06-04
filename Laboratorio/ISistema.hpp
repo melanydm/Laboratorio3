@@ -10,6 +10,7 @@
 #include "./propiedades/datatypes/DtZona.hpp"
 #include "./propiedades/datatypes/DtEdificio.hpp"
 #include "./propiedades/datatypes/DtPropiedad.hpp"
+#include "./usuarios/Usuario.hpp"
 
 #include "./propiedades/datatypes/DtOferta.hpp"
 using namespace std;
@@ -17,24 +18,26 @@ using namespace std;
 class ISistema {
   public:
 
-      virtual bool iniciarSesion(string) = 0;
-      virtual bool ingresarPass(string) = 0;
-      virtual bool crearUsuario(string, string) = 0;
+      virtual bool iniciarSesion(string);
+      virtual bool ingresarPass(string);
+      virtual bool crearUsuario(string, string);
 
-      virtual bool altaInmobiliaria(DtInmobiliaria) = 0;
+      virtual Usuario* getUsuario();
+
+      virtual bool altaInmobiliaria(DtInmobiliaria);
 
       virtual void altaZona(DtZona);
       virtual void altaDepartamento(DtDepartamento);
-      virtual void altaEdificio(DtEdificio) = 0;
-      virtual list<DtDepartamento> listarDepto() = 0;
-      virtual void selectDepto(DtDepartamento)   = 0;
-      virtual list<DtZona> listarZona()  = 0;
-      virtual void selectZona(DtZona)  = 0;
-      virtual list<DtEdificio> listarEdificios() = 0;
-      virtual void selectEdificio(DtEdificio) = 0;
-      virtual void altaPropiedad(DtPropiedad&, DtOferta, bool) = 0;
+      virtual void altaEdificio(DtEdificio);
+      virtual list<DtDepartamento> listarDepto();
+      virtual void selectDepto(DtDepartamento);
+      virtual list<DtZona> listarZona();
+      virtual void selectZona(DtZona);
+      virtual list<DtEdificio> listarEdificios();
+      virtual void selectEdificio(DtEdificio);
+      virtual void altaPropiedad(DtPropiedad&, DtOferta, bool);
 
-      virtual void finalizar() = 0;
+      virtual void finalizar();
 
       //Funciones para precargar datos
       virtual void precargarDatos();

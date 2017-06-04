@@ -1,9 +1,9 @@
 
 output: output.o
-	g++ output.o -o Laboratorio
+	
 
 output.o: *.cpp usuarios/*.cpp propiedades/*.cpp utils/*.cpp
-	g++ -c *.cpp usuarios/*.cpp propiedades/*.cpp utils/*.cpp
+	g++ -c *.cpp usuarios/*.cpp propiedades/*.cpp utils/*.cpp 
 
 clean:
 	rm *.o Laboratorio

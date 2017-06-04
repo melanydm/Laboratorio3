@@ -1,7 +1,9 @@
 #include "Fabrica.hpp"
 #include "ISistema.hpp"
 
-Fabrica::Fabrica(){}
+Fabrica::Fabrica(){
+	
+}
 
 Sistema* Fabrica::getSistema(){
 	return new Sistema();

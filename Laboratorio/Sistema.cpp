@@ -1,4 +1,3 @@
-
 #include "Sistema.hpp"
 using namespace std;
 
@@ -11,7 +10,6 @@ Sistema :: Sistema (){
 Sistema :: ~Sistema(){
   delete this;
 }
-
 
 Usuario* Sistema :: getUsuario(){
   return this->usuario;
