@@ -18,8 +18,8 @@ class DtZona  {
 		//virtual bool operator == (DtZona) = 0;
 
 		// Getters
-		string getCodigo();
-		string getNombre();
+		string getCodigo() const;
+		string getNombre() const;
 	
 		// Setters
 		void setCodigo(string);

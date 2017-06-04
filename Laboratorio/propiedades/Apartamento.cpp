@@ -12,9 +12,6 @@ Apartamento::Apartamento(DtApartamento apto):Propiedad(apto)
     //ctor
 }
 
-Apartamento::Apartamento(DtPropiedad prop) : Propiedad(prop) {
-	
-}
 Apartamento::~Apartamento()
 {
     //dtor

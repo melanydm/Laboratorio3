@@ -9,7 +9,7 @@ DtDepartamento::DtDepartamento(){
     nombre = "";
 }
 
-DtDepartamento::DtDepartamento(DtDepartamento& depto)
+DtDepartamento::DtDepartamento(const DtDepartamento& depto)
 {
     this->id = depto.getId();
     this->nombre = depto.getNombre();

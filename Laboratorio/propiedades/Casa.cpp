@@ -6,9 +6,6 @@ Casa::Casa():Propiedad(){
 Casa::Casa(DtCasa c):Propiedad(c){
     this->mts_espaciosVerdes = c.getMts_espaciosVerdes();
 }
-Casa::Casa(DtPropiedad p):Propiedad(p){
-	this->mts_espaciosVerdes = p.getMts_espaciosVerdes();
-}
 Casa::~Casa()
 {
     //dtor

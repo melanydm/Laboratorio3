@@ -54,7 +54,7 @@ class DtPropiedad  {
 
 		// Destructor
 
-//		virtual ~DtPropiedad()=0;
+		virtual ~DtPropiedad();
 };
 
 istream& operator>>(istream&, DtPropiedad);

@@ -79,7 +79,7 @@ int main(void) {
 									std::cin >> oDtApartamento;
 									DtOferta oDtOferta;
 									std::cin >> oDtOferta;
-									sistema->altaPropiedad(oDtApartamento,oDtOferta);
+									sistema->altaPropiedad(oDtApartamento,oDtOferta, false);
 
 								} else {
 
@@ -87,7 +87,7 @@ int main(void) {
 									std::cin >> oDtCasa;
 									DtOferta oDtOferta;
 									std::cin >> oDtOferta;
-									sistema->altaPropiedad(oDtCasa , oDtOferta);
+									sistema->altaPropiedad(oDtCasa , oDtOferta, true);
 
 								}
 								sistema->finalizar();

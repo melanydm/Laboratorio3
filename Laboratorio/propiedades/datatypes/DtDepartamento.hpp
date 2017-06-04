@@ -1,7 +1,6 @@
 #ifndef DT_DEPARTAMENTO_HPP
 #define DT_DEPARTAMENTO_HPP
 
-
 #include "string"
 #include "iostream"
 #include "iomanip"
@@ -14,14 +13,15 @@ class DtDepartamento {
     private:
         string id;
         string nombre;
+        
     public:
         DtDepartamento();
-        DtDepartamento(DtDepartamento&);
+        DtDepartamento(const DtDepartamento&);
 
         void setId(string id) { this->id = id; }
-        string getId(){ return this->id; }
-        void setNombre(string nombre){ this->nombre = nombre; }
-        string getNombre(){ return this->nombre; }
+        string getId() const { return this->id; }
+        void setNombre(string nombre) { this->nombre = nombre; }
+        string getNombre() const { return this->nombre; }
 		// Operators
 
 		//virtual bool operator == (DtDepartamento) = 0;

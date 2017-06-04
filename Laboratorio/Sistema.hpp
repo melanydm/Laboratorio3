@@ -65,7 +65,7 @@ class Sistema: public ISistema {
       void selectZona(DtZona);
       list<DtEdificio> listarEdificios();
       void selectEdificio(DtEdificio);
-      void altaPropiedad(DtPropiedad, DtOferta);
+      void altaPropiedad(DtPropiedad, DtOferta, bool);
 
       void finalizar();
 

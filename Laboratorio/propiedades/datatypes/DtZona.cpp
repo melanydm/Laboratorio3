@@ -14,8 +14,8 @@ DtZona::DtZona(const DtZona& dtz)
 }
 
 // Setters
-string DtZona::getCodigo() { return codigo; }
-string DtZona::getNombre() { return this->nombre; }
+string DtZona::getCodigo() const { return codigo; }
+string DtZona::getNombre() const { return this->nombre; }
 
 // Getters
 void DtZona::setCodigo(string codigo) { this->codigo = codigo; }

@@ -7,16 +7,16 @@ DtEdificio::DtEdificio()
     this->cant_Pisos = 0;
     this->gastos_Comunes = 0;
 }
-DtEdificio::DtEdificio(const DtEdificio &val)
+DtEdificio::DtEdificio(const DtEdificio& val)
 {
     this->nombre = val.getNombre();
     this->cant_Pisos = val.getCant_Pisos();
     this->gastos_Comunes = val.getGastos_Comunes();
 }
 // Setters
-string DtEdificio::getNombre() { return this->nombre; }
-int DtEdificio::getCant_Pisos() { return cant_Pisos; }
-float DtEdificio::getGastos_Comunes() { return gastos_Comunes; }
+string DtEdificio::getNombre() const { return this->nombre; }
+int DtEdificio::getCant_Pisos() const { return cant_Pisos; }
+float DtEdificio::getGastos_Comunes() const { return gastos_Comunes; }
 
 // Getters
 void DtEdificio::setNombre(string nombre) { this->nombre = nombre; }

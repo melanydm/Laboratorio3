@@ -8,7 +8,7 @@ class Departamento
 {
     public:
         Departamento();
-        Departamento(const DtDepartamento);
+        Departamento(DtDepartamento);
         virtual ~Departamento();
         string getId();
         void setId(string);

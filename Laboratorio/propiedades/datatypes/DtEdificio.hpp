@@ -1,5 +1,6 @@
 #ifndef DT_EDIFICIO_HPP
 #define DT_EDIFICIO_HPP
+
 #include "string"
 #include "iostream"
 #include "iomanip"
@@ -21,9 +22,9 @@ class DtEdificio {
 		//virtual bool operator == (DtEdificio) = 0;
 
 		// Getters
-		string getNombre();
-		int getCant_Pisos();
-		float getGastos_Comunes();
+		string getNombre() const;
+		int getCant_Pisos() const;
+		float getGastos_Comunes() const;
 
 		// Setters
 		void setNombre(string);

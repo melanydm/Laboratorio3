@@ -8,7 +8,7 @@ Departamento::Departamento()
     nombre="";
 }
 
-Departamento::Departamento(const DtDepartamento depto)
+Departamento::Departamento(DtDepartamento depto)
 {
     this->id = depto.getId();
     this->nombre = depto.getNombre();
